@@ -1,0 +1,159 @@
+﻿{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": "hi, hey, hai, hola, hello, howdy, wassup, good day, good morning, good afternoon, good evening",
+            "responses": "hi, hey, hello, hola, greetings",
+            "context": "general"
+        },
+        {
+            "tag": "greeting",
+            "patterns": "who are you, what can you do, what will you do, introduce yourself, you are, what is your name, tell me about yourself",
+            "responses": "i am a py chatbot",
+            "context": "general"
+        },
+        {
+            "tag": "goodbye",
+            "patterns": "bye, see you, done",
+            "responses": "thanks, pleasure is mine, have a nice day",
+            "context": "general"
+        },
+        {
+            "tag": "options",
+            "patterns": "(ui driven)",
+            "responses": "(all options in dropdown)"
+        },
+        {
+            "tag": "int",
+            "patterns": "what is int, int, how to use int. where to use int",
+            "responses": "The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. We will see more about numeric types later in the tutorial.",
+            "context": "datatypes"
+        },
+        {
+            "tag": "int",
+            "patterns": "how to use add in python, add operator in python, add, addition in python, + operator in python, + ",
+            "responses": "2 + 2 = 4, 1+ 3 = 4, 5 - 5 =0",
+            "context": "datatypes"
+        },
+        {
+            "tag": "int",
+            "patterns": "how to use subtraction in python, sub operator in python, sub ,subtraction , subtraction in python, - operator in python, - ",
+            "responses": "4 - 1 = -3, 5 -7 = -2, 3-1=2, 89-7=82, 1000-500=500 ,700-80=620, 78-8 =70 ,999-99=900 ",
+            "context": "datatypes"
+        },
+        {
+            "tag": "int",
+            "patterns": "how to use multiplication in python, multiplication operator in python, multiplication , mul, multiplication in python, * operator in python,  *",
+            "responses": "5 * 5 = 25, 7 *7 =49 , 5 * 9 =45, 8 * 5=40, 55*10 =550, 100*9 =900 ",
+            "context": "datatypes"
+        },
+        {
+            "tag": "int",
+            "patterns": "how to use division in python, division operator in python, division, divide, division in python, / operator in python,  /",
+            "responses": "25 / 5 =5, 45 /5=9, 55/5 =5, 60/6=6, 88/11 =8, 11/11 = 1, 100/10 = 10, 88/8 = 8, 88/2 =44",
+            "context": "datatypes"
+        },
+        {
+            "tag": "int",
+            "patterns": "how to use modulo in python, modulo operator in python, modulo, mod, modulo in python, % operator in python,  %",
+            "responses": "12 %5 = 2, 55%5 =0, 77%7 =0, 100%9 =1",
+            "context": "datatypes"
+        },
+        {
+            "tag": "float",
+            "patterns": "what is float, float, how to use float, where to use float  , float, fraction",
+            "responses": "float (floating point real values) − Also called floats, they represent real numbers and are written with a decimal point dividing the integer and fractional parts. Floats may also be in scientific notation, with E or e indicating the power of 10 (2.5e2 = 2.5 x 102 = 250).",
+            "context": "datatypes"
+        },
+        {
+            "tag": "float",
+            "patterns": "example of float, how to use float , float example,  fraction, fraction example ,float in python, fraction in python ",
+            "responses": "4 * 3.75 - 1 =14.0, 55.0+50.1=100.1, 100.5+0.10 =100.6, 55+1.2=56.2 ",
+            "context": "datatypes"
+        },
+        {
+            "tag": " string",
+            "patterns": "what is string, str, how to use string, when to use str, where to use str, string",
+            "responses": "Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes (\"...\") with the same result",
+            "context": "datatypes"
+        },
+        {
+            "tag": "string",
+            "patterns": "example of string, how to use string , string example, str example ,str in python example ",
+            "responses": "spam eggs'  or \"Spam eggs\", \"Python\" ,'pycharm', \"Man From Corner of earth\"",
+            "context": "datatypes"
+        },
+        {
+            "tag": "list",
+            "patterns": "what is list, list, how to use list, when to use list, where to use list",
+            "responses": "Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.squares = [1, 4, 9, 16, 25]",
+            "context": "datatypes"
+        },
+        {
+            "tag": "list",
+            "patterns": "what is index list, index list, how to use index list, when to use index list, where to use index list",
+            "responses": "squares = [1, 4, 9, 16, 25] => squares[0]=1 or squares[-1]=25",
+            "context": "datatypes"
+        },
+        {
+            "tag": "list",
+            "patterns": "example of concatenation in list, how to use concatenation in list, concatenation in list example, concatenation example, concatenation in list",
+            "responses": "squares + [36, 49, 64, 81, 100] = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+            "context": "datatypes"
+        },
+        {
+            "tag": "list",
+            "patterns": "example of append in list, how to use append in list, append in list example, append example, append in list ,what is append list, append list, how to use append list, when to use list append, where to use index append",
+            "responses": "cubes = [1, 8, 27, 65, 125] - cubes.append(216) - cubes =  [1, 8, 27, 65, 125,216] ",
+            "context": "datatypes"
+        },
+        {
+            "tag": "list",
+            "patterns": "example of pop in list, how to use pop in list, pop in list example, pop example, pop in list ,what is pop list, pop list, how to use pop list, when to use list pop, where to use index pop",
+            "responses": "The pop() method removes the item at the given index from the list and returns the removed item. e,g. languages = ['Python', 'Java', 'C++', 'French', 'C'] -> languages.pop(3) -> Updated List: ['Python', 'Java', 'C++', 'C']",
+            "context": "datatypes"
+        },
+        {
+            "tag": "tuple",
+            "patterns": "what is tuples, tuples, how to use tuples, when to use tuples, where to use tuples",
+            "responses": "Tuples are immutable sequences, typically used to store collections of heterogeneous data (such as the 2-tuples produced by the enumerate() built-in). Tuples are also used for cases where an immutable sequence of homogeneous data.  e.g.  mytuple = (\"apple\", \"banana\", \"cherry\")",
+            "context": "datatype"
+        },
+        {
+            "tag": "tuple",
+            "patterns": "example of tuples, how to use tuples, tuples example, tuples example",
+            "responses": "print((1, 2, 3) + (4, 5, 6)) => Output: (1, 2, 3, 4, 5, 6)",
+            "context": "datatype"
+        },
+        {
+            "tag": "complex",
+            "patterns": "what is complex, complex, how to use complex, when to use complex, where to use complex, example of complex, how to use complex, complex example",
+            "responses": "An complex number is represented by “ x + yi “. Python converts the real numbers x and y into complex using the function complex(x,y). The real part can be accessed using the function real().",
+            "context": "datatype"
+        },
+        {
+            "tag": "if",
+            "patterns": "if statement in python, what is if in python?, when to use if?, where to use if?,uses of if in python",
+            "responses": " if statement is used for conditional execution, The if statement contains a logical expression using which data is compared and a decision is made based on the result of the comparison.",
+            "context": "definition for if"
+        },
+        {
+            "tag": "if",
+            "patterns": "syntax for if in python, syntax for if, how to use if in python?,syntax for if statement",
+            "responses": "if expression: statement(s),",
+            "context": "syntax for if"
+        },
+        {
+            "tag": "if",
+            "patterns": "example for if statement, if statement example, examples for if, if statement example",
+            "responses": "var1 = 100&#10;if var1:&#10;   print \"1 - Got a true expression value\"&#10;output:1 - Got a true expression value, &#10;var2 = 0&#10;if var2:&#10;   print \"2 - Got a true expression value\"&#10;output:Does not print anything   ",
+            "context": "example for if"
+        },
+        {
+            "tag": "if else",
+            "patterns": "if else statement in python,  what is if else in python?,  when to use if else?,  where to use if else?, uses of if else in python, if-else,",
+            "responses": "The else statement is an optional statement and there could be at most only one else statement following if.",
+            "context": "definition for if else"
+        }
+    ]
+}
