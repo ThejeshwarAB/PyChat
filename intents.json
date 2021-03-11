@@ -1,42 +1,1588 @@
-﻿{"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
-     "context_set": ""
-    },
-    {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye"],
-     "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
-    },
-    {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {"tag": "hours",
-     "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
-     "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
-    },
-    {"tag": "mopeds",
-     "patterns": ["Which mopeds do you have?", "What kinds of mopeds are there?", "What do you rent?" ],
-     "responses": ["We rent Yamaha, Piaggio and Vespa mopeds", "We have Piaggio, Vespa and Yamaha mopeds"]
-    },
-    {"tag": "payments",
-     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
-     "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
-    },
-    {"tag": "opentoday",
-     "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
-     "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
-    },
-    {"tag": "rental",
-     "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?" ],
-     "responses": ["Are you looking to rent today or later this week?"],
-     "context_set": "rentalday"
-    },
-    {"tag": "today",
-     "patterns": ["today"],
-     "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
-     "context_filter": "rentalday"
-    }
-]
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Good day",
+                "How are you",
+                "Is anyone there"
+            ],
+            "responses": [
+                "Good to see you again",
+                "Hi there, how can i help",
+                "Hello, thanks for visiting"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later, thanks for visiting",
+                "Have a nice day",
+                "Bsye, come back again soon"
+            ]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [
+                "<some regex>"
+            ],
+            "responses": [
+                "Sorry",
+                "Try again",
+                "Could not understand"
+            ]
+        },
+        {
+            "tag": "options",
+            "patterns": [
+                "what can you do",
+                "show me options",
+                "help me"
+            ],
+            "responses": [
+                "definitions",
+                "syntaxes",
+                "examples",
+                "codes"
+            ]
+        },
+        {
+            "tag": "int",
+            "patterns": [
+                "what is int",
+                "integer in python",
+                "integer"
+            ],
+            "responses": [
+                "The int() method returns an integer object from any number or string"
+            ]
+        },
+        {
+            "tag": "float",
+            "patterns": [
+                "what is float",
+                "float",
+                "decimal",
+                "float in python"
+            ],
+            "responses": [
+                "The float() method returns a floating point number from a number or a string"
+            ]
+        },
+        {
+            "tag": "string",
+            "patterns": [
+                "what is string",
+                "string in python",
+                "string datatype"
+            ],
+            "responses": [
+                "A string in Python is a sequence of characters. It is a derived data type. Strings are immutable. This means that once defined, they cannot be changed"
+            ]
+        },
+        {
+            "tag": "return",
+            "patterns": [
+                "what is return",
+                "return in python",
+                "return"
+            ],
+            "responses": [
+                "The return statement is used to exit a function and go back to the place from where it was called"
+            ]
+        },
+        {
+            "tag": "tuple",
+            "patterns": [
+                "what is tuple",
+                "tuple in python",
+                "tuple"
+            ],
+            "responses": [
+                "The tuple() builtin can be used to create tuples in Python"
+            ]
+        },
+        {
+            "tag": "complex",
+            "patterns": [
+                "complex is tuple",
+                "complex in python",
+                "complex"
+            ],
+            "responses": [
+                "The complex() method returns a complex number when real and imaginary parts are provided, or it converts a string to a complex number"
+            ]
+        },
+        {
+            "tag": "compile",
+            "patterns": [
+                "what is compile",
+                "compile in python",
+                "compile"
+            ],
+            "responses": [
+                "The compile() method returns a Python code object from the source (normal string, a byte string, or an AST object)"
+            ]
+        },
+        {
+            "tag": "if",
+            "patterns": [
+                "what is if",
+                "if in python",
+                "if"
+            ],
+            "responses": [
+                " the program evaluates the test expression and will execute statement(s) only if the test expression is True, If the test expression is False, the statement(s) is not executed"
+            ]
+        },
+        {
+            "tag": "if else",
+            "patterns": [
+                "what is if else",
+                "if else in python",
+                "if else"
+            ],
+            "responses": [
+                " the program evaluates the test expression and will execute statement(s) only if the test expression is True, If the condition is False, the body of else is executed. Indentation is used to separate the blocks "
+            ]
+        },
+        {
+            "tag": "if elif else",
+            "patterns": [
+                "what is if elif else",
+                "if elif else in python",
+                "if elif else"
+            ],
+            "responses": [
+                "If the condition for if is False, it checks the condition of the next elif block and so on, If all the conditions are False, the body of else is executed, Only one block among the several if...elif...else blocks is executed according to the condition, The if block can have only one else block. But it can have multiple elif blocks "
+            ]
+        },
+        {
+            "tag": "for",
+            "patterns": [
+                "what is for",
+                "for in python",
+                "for"
+            ],
+            "responses": [
+                "The for loop in Python is used to iterate over a sequence (list, tuple, string) or other iterable objects. Iterating over a sequence is called traversal"
+            ]
+        },
+        {
+            "tag": "while",
+            "patterns": [
+                "what is while",
+                "while in python",
+                "while"
+            ],
+            "responses": [
+                "The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true"
+            ]
+        },
+        {
+            "tag": "break",
+            "patterns": [
+                "what is break",
+                "break in python",
+                "break"
+            ],
+            "responses": [
+                "The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop"
+            ]
+        },
+        {
+            "tag": "continue",
+            "patterns": [
+                "what is continue",
+                "continue in python",
+                "continue"
+            ],
+            "responses": [
+                "The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration"
+            ]
+        },
+        {
+            "tag": "pass",
+            "patterns": [
+                "what is pass",
+                "pass in python",
+                "pass"
+            ],
+            "responses": [
+                "In Python programming, the pass statement is a null statement. The difference between a comment and a pass statement in Python is that while the interpreter ignores a comment entirely, pass is not ignored"
+            ]
+        },
+        {
+            "tag": "range",
+            "patterns": [
+                "what is range",
+                "range in python",
+                "range"
+            ],
+            "responses": [
+                "The range() type returns an immutable sequence of numbers between the given start integer to the stop integer"
+            ]
+        },
+        {
+            "tag": "function",
+            "patterns": [
+                "what is function",
+                "function in python",
+                "function"
+            ],
+            "responses": [
+                "n Python, a function is a group of related statements that performs a specific task",
+                "Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable"
+            ]
+        },
+        {
+            "tag": "args",
+            "patterns": [
+                "what is args",
+                "args in python",
+                "args"
+            ],
+            "responses": [
+                "The special syntax *args in function definitions in python is used to pass a variable number of arguments to a function. It is used to pass a non-key worded, variable-length argument list"
+            ]
+        },
+        {
+            "tag": "kwargs",
+            "patterns": [
+                "what is kwargs",
+                "kwargs in python",
+                "kwargs"
+            ],
+            "responses": [
+                "The special syntax **kwargs in function definitions in python is used to pass a keyworded, variable-length argument list. We use the name kwargs with the double star"
+            ]
+        },
+        {
+            "tag": "lambda",
+            "patterns": [
+                "what is lambda",
+                "lambda in python",
+                "lambda"
+            ],
+            "responses": [
+                "A lambda function can take any number of arguments, but can only have one expression"
+            ]
+        },
+        {
+            "tag": "filter",
+            "patterns": [
+                "what is filter",
+                "filter in python",
+                "filter"
+            ],
+            "responses": [
+                "The filter() method constructs an iterator from elements of an iterable for which a function returns true"
+            ]
+        },
+        {
+            "tag": "upper",
+            "patterns": [
+                "what is upper",
+                "upper in python",
+                "upper"
+            ],
+            "responses": [
+                "Converts a string into upper case"
+            ]
+        },
+        {
+            "tag": "print",
+            "patterns": [
+                "what is print",
+                "print in python",
+                "print"
+            ],
+            "responses": [
+                "The print() function prints the given object to the standard output device (screen) or to the text stream file"
+            ]
+        },
+        {
+            "tag": "map",
+            "patterns": [
+                "what is map",
+                "map in python",
+                "map"
+            ],
+            "responses": [
+                "The map() function applies a given function to each item of an iterable (list, tuple etc.) and returns a list of the results"
+            ]
+        },
+        {
+            "tag": "abs",
+            "patterns": [
+                "what is abs",
+                "abs in python",
+                "abs"
+            ],
+            "responses": [
+                "The abs() method returns the absolute value of the given number. If the number is a complex number, abs() returns its magnitude"
+            ]
+        },
+        {
+            "tag": "round",
+            "patterns": [
+                "what is round",
+                "round in python",
+                "round"
+            ],
+            "responses": [
+                "The round() function returns a floating point number that is a rounded version of the specified number, with the specified number of decimals"
+            ]
+        },
+        {
+            "tag": "min",
+            "patterns": [
+                "what is min",
+                "min in python",
+                "min"
+            ],
+            "responses": [
+                "The Python min() function returns the smallest item in an iterable. It can also be used to find the smallest item between two or more parameters"
+            ]
+        },
+        {
+            "tag": "max",
+            "patterns": [
+                "what is max",
+                "max in python",
+                "max"
+            ],
+            "responses": [
+                "The Python max() function returns the largest item in an iterable. It can also be used to find the largest item between two or more parameters"
+            ]
+        },
+        {
+            "tag": "sorted",
+            "patterns": [
+                "what is sorted",
+                "sorted in python",
+                "sorted"
+            ],
+            "responses": [
+                "The sorted() function returns a sorted list from the items in an iterable"
+            ]
+        },
+        {
+            "tag": "lower",
+            "patterns": [
+                "what is lower",
+                "lower in python",
+                "lower"
+            ],
+            "responses": [
+                "Converts a string into lower case"
+            ]
+        },
+        {
+            "tag": "sum",
+            "patterns": [
+                "what is sum",
+                "sum in python",
+                "sum"
+            ],
+            "responses": [
+                "The sum() function adds the items of an iterable and returns the sum"
+            ]
+        },
+        {
+            "tag": "type",
+            "patterns": [
+                "what is type",
+                "type in python",
+                "type"
+            ],
+            "responses": [
+                "The type() function either returns the type of the object or returns a new type object based on the arguments passed"
+            ]
+        },
+        {
+            "tag": "append",
+            "patterns": [
+                "what is append",
+                "append in python",
+                "append"
+            ],
+            "responses": [
+                "Adds an element at the end of the list"
+            ]
+        },
+        {
+            "tag": "lstrip",
+            "patterns": [
+                "what is lstrip",
+                "lstrip in python",
+                "lstrip"
+            ],
+            "responses": [
+                "Returns a left trim version of the string"
+            ]
+        },
+        {
+            "tag": "replace",
+            "patterns": [
+                "what is replace",
+                "replace in python",
+                "replace"
+            ],
+            "responses": [
+                "The replace() method replaces a specified phrase with another specified phrase"
+            ]
+        },
+        {
+            "tag": "split",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The split() method breaks up a string at the specified separator and returns a list of strings"
+            ]
+        },
+        {
+            "tag": "join",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The join() string method returns a string by joining all the elements of an iterable, separated by a string separator"
+            ]
+        },
+        {
+            "tag": "remove",
+            "patterns": [
+                "what is remove",
+                "remove in python",
+                "remove"
+            ],
+            "responses": [
+                "The remove() method removes the first matching element (which is passed as an argument) from the list"
+            ]
+        },
+        {
+            "tag": "count",
+            "patterns": [
+                "what is count",
+                "count in python",
+                "count"
+            ],
+            "responses": [
+                "The string count() method returns the number of occurrences of a substring in the given string"
+            ]
+        },
+        {
+            "tag": "clear",
+            "patterns": [
+                "what is clear",
+                "clear in python",
+                "clear"
+            ],
+            "responses": [
+                "Removes all the elements from the list"
+            ]
+        },
+        {
+            "tag": "keys",
+            "patterns": [
+                "what is keys",
+                "keys in python",
+                "keys"
+            ],
+            "responses": [
+                "The keys() method returns a view object. The view object contains the keys of the dictionary, as a list. The view object will reflect any changes done to the dictionary"
+            ]
+        },
+        {
+            "tag": "values",
+            "patterns": [
+                "what is values",
+                "values in python",
+                "values"
+            ],
+            "responses": [
+                "The values() method returns a view object that displays a list of all the values in the dictionary"
+            ]
+        },
+        {
+            "tag": "str",
+            "patterns": [
+                "what is str",
+                "str in python",
+                "str"
+            ],
+            "responses": [
+                "The setattr() function sets the value of the attribute of an object"
+            ]
+        },
+        {
+            "tag": "all",
+            "patterns": [
+                "what is all",
+                "all in python",
+                "all"
+            ],
+            "responses": [
+                "The all() method returns True when all elements in the given iterable are true. If not, it returns False"
+            ]
+        },
+        {
+            "tag": "any",
+            "patterns": [
+                "what is any",
+                "any in python",
+                "any"
+            ],
+            "responses": [
+                "The any() function returns True if any element of an iterable is True. If not, any() returns False"
+            ]
+        },
+        {
+            "tag": "ascii",
+            "patterns": [
+                "what is ascii",
+                "ascii in python",
+                "ascii"
+            ],
+            "responses": [
+                "The ascii() method returns a string containing a printable representation of an object. It escapes the non-ASCII characters in the string using escapes"
+            ]
+        },
+        {
+            "tag": "bin",
+            "patterns": [
+                "what is bin",
+                "bin in python",
+                "bin"
+            ],
+            "responses": [
+                "Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If x is not a Python int object, it has to define an _index_() method that returns an integer"
+            ]
+        },
+        {
+            "tag": "bool",
+            "patterns": [
+                "what is bool",
+                "bool in python",
+                "bool"
+            ],
+            "responses": [
+                "The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure"
+            ]
+        },
+        {
+            "tag": "bytearray",
+            "patterns": [
+                "what is bytearray",
+                "bytearray in python",
+                "bytearray"
+            ],
+            "responses": [
+                "Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 <= x < 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and Bytearray Operations."
+            ]
+        },
+        {
+            "tag": "bytes",
+            "patterns": [
+                "what is bytes",
+                "bytes in python",
+                "bytes"
+            ],
+            "responses": [
+                "Return a new “bytes” object, which is an immutable sequence of integers in the range 0 <= x < 256. bytes is an immutable version of bytearray – it has the same non-mutating methods and the same indexing and slicing behavior"
+            ]
+        },
+        {
+            "tag": "callable",
+            "patterns": [
+                "what is callable in python?",
+                "callable in python",
+                "python callable"
+            ],
+            "responses": [
+                "Return True if the object argument appears callable, False if not. If this returns True, it is still possible that a call fails, but if it is False, calling object will never succeed"
+            ]
+        },
+        {
+            "tag": "chr",
+            "patterns": [
+                "what is chr in python?",
+                "chr in python",
+                "python chr"
+            ],
+            "responses": [
+                "Return the string representing a character whose Unicode code point is the integer i. For example, chr(97) returns the string 'a', while chr(8364) returns the string '€' "
+            ]
+        },
+        {
+            "tag": "classmethod",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The classmethod() method returns a class method for the given function"
+            ]
+        },
+        {
+            "tag": "delattr",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "This is a relative of setattr(). The arguments are an object and a string. The string must be the name of one of the object’s attributes. The function deletes the named attribute, provided the object allows it. For example, delattr(x, 'foobar') is equivalent to del x.foobar"
+            ]
+        },
+        {
+            "tag": "dict",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The dict() constructor creates a dictionary in Python"
+            ]
+        },
+        {
+            "tag": "dir",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The dir() method tries to return a list of valid attributes of the object"
+            ]
+        },
+        {
+            "tag": "divmod",
+            "patterns": [
+                "what is ",
+                " in python",
+                ""
+            ],
+            "responses": [
+                "The divmod() method takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder"
+            ]
+        },
+        {
+            "tag": "enumerate",
+            "patterns": [
+                "what is enumerate",
+                "enumerate in python",
+                "enumerate"
+            ],
+            "responses": [
+                "The enumerate() method adds counter to an iterable and returns it (the enumerate object)"
+            ]
+        },
+        {
+            "tag": "eval",
+            "patterns": [
+                "what is eval",
+                "eval in python",
+                "eval"
+            ],
+            "responses": [
+                "The eval() method parses the expression passed to this method and runs python expression (code) within the program"
+            ]
+        },
+        {
+            "tag": "exec",
+            "patterns": [
+                "what is exec",
+                "exec in python",
+                "exec"
+            ],
+            "responses": [
+                "The exec() method executes the dynamically created program, which is either a string or a code object"
+            ]
+        },
+        {
+            "tag": "filter",
+            "patterns": [
+                "what is filter",
+                "filter in python",
+                "filter"
+            ],
+            "responses": [
+                "The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not"
+            ]
+        },
+        {
+            "tag": "format",
+            "patterns": [
+                "what is format",
+                "format in python",
+                "format"
+            ],
+            "responses": [
+                "The built-in format() method returns a formatted representation of the given value controlled by the format specifier"
+            ]
+        },
+        {
+            "tag": "frozenset",
+            "patterns": [
+                "what is frozenset",
+                "frozenset in python",
+                "frozenset"
+            ],
+            "responses": [
+                "The frozenset() function returns an immutable frozenset object initialized with elements from the given iterable"
+            ]
+        },
+        {
+            "tag": "getattr",
+            "patterns": [
+                "what is getattr",
+                "getattr in python",
+                "getattr"
+            ],
+            "responses": [
+                "The getattr() method returns the value of the named attribute of an object. If not found, it returns the default value provided to the function"
+            ]
+        },
+        {
+            "tag": "globals",
+            "patterns": [
+                "what is globals",
+                "globals in python",
+                "globals"
+            ],
+            "responses": [
+                "The globals() method returns the dictionary of the current global symbol table"
+            ]
+        },
+        {
+            "tag": "hasattr",
+            "patterns": [
+                "what is hasattr",
+                "hasattr in python",
+                "hasattr"
+            ],
+            "responses": [
+                "The hasattr() method returns true if an object has the given named attribute and false if it does not"
+            ]
+        },
+        {
+            "tag": "hash",
+            "patterns": [
+                "what is hash",
+                "hash in python",
+                "hash"
+            ],
+            "responses": [
+                "The hash() method returns the hash value of an object if it has one"
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "what is help",
+                "help in python",
+                "help"
+            ],
+            "responses": [
+                "The help() method calls the built-in Python help system"
+            ]
+        },
+        {
+            "tag": "hex",
+            "patterns": [
+                "what is hex",
+                "hex in python",
+                "hex"
+            ],
+            "responses": [
+                "The hex() function converts an integer number to the corresponding hexadecimal string"
+            ]
+        },
+        {
+            "tag": "id",
+            "patterns": [
+                "what is id",
+                "id in python",
+                "id"
+            ],
+            "responses": [
+                "The id() function returns identity (unique integer) of an object"
+            ]
+        },
+        {
+            "tag": "input",
+            "patterns": [
+                "what is input",
+                "input in python",
+                "input"
+            ],
+            "responses": [
+                "The input() method reads a line from input, converts into a string and returns it"
+            ]
+        },
+        {
+            "tag": "isinstance",
+            "patterns": [
+                "what is isinstance",
+                "isinstance in python",
+                "isinstance"
+            ],
+            "responses": [
+                "The isinstance() function checks if the object (first argument) is an instance or subclass of classinfo class (second argument)"
+            ]
+        },
+        {
+            "tag": "issubclass",
+            "patterns": [
+                "what is issubclass",
+                "issubclass in python",
+                "issubclass"
+            ],
+            "responses": [
+                "The issubclass() function checks if the class argument (first argument) is a subclass of classinfo class (second argument)"
+            ]
+        },
+        {
+            "tag": "iter",
+            "patterns": [
+                "what is iter",
+                "iter in python",
+                "iter"
+            ],
+            "responses": [
+                "The Python iter() function returns an iterator for the given object"
+            ]
+        },
+        {
+            "tag": "list",
+            "patterns": [
+                "what is list",
+                "list in python",
+                "list"
+            ],
+            "responses": [
+                "The list() constructor returns a list in Python"
+            ]
+        },
+        {
+            "tag": "memoryview()",
+            "patterns": [
+                "what is memoryview()",
+                "memoryview() in python",
+                "memoryview()"
+            ],
+            "responses": [
+                "The memoryview() function returns a memory view object of the given argument"
+            ]
+        },
+        {
+            "tag": "next",
+            "patterns": [
+                "what is next",
+                "next in python",
+                "next"
+            ],
+            "responses": [
+                "The next() function returns the next item from the iterator"
+            ]
+        },
+        {
+            "tag": "locals",
+            "patterns": [
+                "what is locals",
+                "locals in python",
+                "locals"
+            ],
+            "responses": [
+                "The locals() method updates and returns a dictionary of the current local symbol table"
+            ]
+        },
+        {
+            "tag": "object",
+            "patterns": [
+                "what is object",
+                "object in python",
+                "object"
+            ],
+            "responses": [
+                "The object() function returns a featureless object which is a base for all classes"
+            ]
+        },
+        {
+            "tag": "len",
+            "patterns": [
+                "what is len",
+                "len in python",
+                "len"
+            ],
+            "responses": [
+                "The len() function returns the number of items (length) in an object"
+            ]
+        },
+        {
+            "tag": "oct",
+            "patterns": [
+                "what is oct",
+                "oct in python",
+                "oct"
+            ],
+            "responses": [
+                "The oct() function takes an integer number and returns its octal representation"
+            ]
+        },
+        {
+            "tag": "open",
+            "patterns": [
+                "what is open",
+                "open in python",
+                "open"
+            ],
+            "responses": [
+                "The open() function opens the file (if possible) and returns the corresponding file object"
+            ]
+        },
+        {
+            "tag": "ord",
+            "patterns": [
+                "what is ord",
+                "ord in python",
+                "ord"
+            ],
+            "responses": [
+                "The ord() function returns an integer representing the Unicode character"
+            ]
+        },
+        {
+            "tag": "pow",
+            "patterns": [
+                "what is pow",
+                "pow in python",
+                "pow"
+            ],
+            "responses": [
+                "The pow() function returns the power of a number"
+            ]
+        },
+        {
+            "tag": "property",
+            "patterns": [
+                "what is property",
+                "property in python",
+                "property"
+            ],
+            "responses": [
+                "The property() construct returns the property attribute"
+            ]
+        },
+        {
+            "tag": "repr",
+            "patterns": [
+                "what is repr",
+                "repr in python",
+                "repr"
+            ],
+            "responses": [
+                "The repr() function returns a printable representation of the given object"
+            ]
+        },
+        {
+            "tag": "reserved",
+            "patterns": [
+                "what is reserved",
+                "reserved in python",
+                "reserved"
+            ],
+            "responses": [
+                "The reversed() function returns the reversed iterator of the given sequence"
+            ]
+        },
+        {
+            "tag": "round",
+            "patterns": [
+                "what is round",
+                "round in python",
+                "round"
+            ],
+            "responses": [
+                "The round() function returns a floating-point number rounded to the specified number of decimals"
+            ]
+        },
+        {
+            "tag": "set",
+            "patterns": [
+                "what is set",
+                "set in python",
+                "set"
+            ],
+            "responses": [
+                "The set() builtin creates a set in Python"
+            ]
+        },
+        {
+            "tag": "setattr",
+            "patterns": [
+                "what is setattr",
+                "setattr in python",
+                "setattr"
+            ],
+            "responses": [
+                "The setattr() function sets the value of the attribute of an object"
+            ]
+        },
+        {
+            "tag": "slice",
+            "patterns": [
+                "what is slice",
+                "slice in python",
+                "slice"
+            ],
+            "responses": [
+                "The slice() function returns a slice object that can use used to slice strings, lists, tuple etc"
+            ]
+        },
+        {
+            "tag": "staticmethod",
+            "patterns": [
+                "what is staticmethod",
+                "staticmethod in python",
+                "staticmethod"
+            ],
+            "responses": [
+                "The staticmethod() built-in function returns a static method for a given function"
+            ]
+        },
+        {
+            "tag": "super",
+            "patterns": [
+                "what is super",
+                "super in python",
+                "super"
+            ],
+            "responses": [
+                "The super() builtin returns a proxy object (temporary object of the superclass) that allows us to access methods of the base class"
+            ]
+        },
+        {
+            "tag": "vars",
+            "patterns": [
+                "what is vars",
+                "vars in python",
+                "vars"
+            ],
+            "responses": [
+                "The vars() function returns the _dict_ attribute of the given object"
+            ]
+        },
+        {
+            "tag": "zip",
+            "patterns": [
+                "what is zip",
+                "zip in python",
+                "zip"
+            ],
+            "responses": [
+                "The zip() function takes iterables (can be zero or more), aggregates them in a tuple, and return it"
+            ]
+        },
+        {
+            "tag": "capitalize",
+            "patterns": [
+                "what is capitalize",
+                "capitalize in python",
+                "capitalize"
+            ],
+            "responses": [
+                "the capitalize() method returns a copy of the original string and converts the first character of the string to a capital (uppercase) letter while making all other characters in the string lowercase letters"
+            ]
+        },
+        {
+            "tag": "casefold",
+            "patterns": [
+                "what is casefold",
+                "casefold in python",
+                "casefold"
+            ],
+            "responses": [
+                "The casefold() string method is used to implement caseless string matching. It is similar to lower() string method but case removes all the case distinctions present in a string. i.e ignore cases when comparing"
+            ]
+        },
+        {
+            "tag": "center",
+            "patterns": [
+                "what is center",
+                "center in python",
+                "center"
+            ],
+            "responses": [
+                "The center() method will center align the string, using a specified character (space is default) as the fill character"
+            ]
+        },
+        {
+            "tag": "encode",
+            "patterns": [
+                "what is encode",
+                "encode in python",
+                "encode"
+            ],
+            "responses": [
+                "The encode() method encodes the string, using the specified encoding. If no encoding is specified, UTF-8 will be used"
+            ]
+        },
+        {
+            "tag": "endswith",
+            "patterns": [
+                "what is endswith",
+                "endswith in python",
+                "endswith"
+            ],
+            "responses": [
+                "Returns true if the string ends with the specified value"
+            ]
+        },
+        {
+            "tag": "expandtabs",
+            "patterns": [
+                "what is expandtabs",
+                "expandtabs in python",
+                "expandtabs"
+            ],
+            "responses": [
+                "Sets the tab size of the string"
+            ]
+        },
+        {
+            "tag": "find",
+            "patterns": [
+                "what is find",
+                "find in python",
+                "find"
+            ],
+            "responses": [
+                "The find() method returns the index of first occurrence of the substring (if found). If not found, it returns -1"
+            ]
+        },
+        {
+            "tag": "format",
+            "patterns": [
+                "what is format",
+                "format in python",
+                "format"
+            ],
+            "responses": [
+                "The built-in format() method returns a formatted representation of the given value controlled by the format specifier"
+            ]
+        },
+        {
+            "tag": "formatmap",
+            "patterns": [
+                "what is formatmap",
+                "formatmap in python",
+                "formatmap"
+            ],
+            "responses": [
+                "Formats specified values in a string"
+            ]
+        },
+        {
+            "tag": "index",
+            "patterns": [
+                "what is index",
+                "index in python",
+                "index"
+            ],
+            "responses": [
+                "Searches the string for a specified value and returns the position of where it was found"
+            ]
+        },
+        {
+            "tag": "isalpha",
+            "patterns": [
+                "what is isalpha",
+                "isalpha in python",
+                "isalpha"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are in the alphabet"
+            ]
+        },
+        {
+            "tag": "import",
+            "patterns": [
+                "what is import",
+                "import in python",
+                "import"
+            ],
+            "responses": [
+                "The _import_() is a function that is called by the import statement"
+            ]
+        },
+        {
+            "tag": "isdecimal",
+            "patterns": [
+                "what is isdecimal",
+                "isdecimal in python",
+                "isdecimal"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are decimals"
+            ]
+        },
+        {
+            "tag": "isalnum",
+            "patterns": [
+                "what is isalnum",
+                "isalnum in python",
+                "isalnum"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are alphanumeric"
+            ]
+        },
+        {
+            "tag": "isdigit",
+            "patterns": [
+                "what is isdigit",
+                "isdigit in python",
+                "isdigit"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are digits"
+            ]
+        },
+        {
+            "tag": "isidentifier",
+            "patterns": [
+                "what is isidentifier",
+                "isidentifier in python",
+                "isidentifier"
+            ],
+            "responses": [
+                "Returns True if the string is an identifier"
+            ]
+        },
+        {
+            "tag": "islower",
+            "patterns": [
+                "what is islower",
+                "islower in python",
+                "islower"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are lower case"
+            ]
+        },
+        {
+            "tag": "isnumeric",
+            "patterns": [
+                "what is isnumeric",
+                "isnumeric in python",
+                "isnumeric"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are numeric"
+            ]
+        },
+        {
+            "tag": "isprintable",
+            "patterns": [
+                "what is isprintable",
+                "isprintable in python",
+                "isprintable"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are printable"
+            ]
+        },
+        {
+            "tag": "isspace",
+            "patterns": [
+                "what is isspace",
+                "isspace in python",
+                "isspace"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are whitespaces"
+            ]
+        },
+        {
+            "tag": "istitle",
+            "patterns": [
+                "what is istitle",
+                "istitle in python",
+                "istitle"
+            ],
+            "responses": [
+                "Returns True if the string follows the rules of a title"
+            ]
+        },
+        {
+            "tag": "isupper",
+            "patterns": [
+                "what is isupper",
+                "isupper in python",
+                "isupper"
+            ],
+            "responses": [
+                "Returns True if all characters in the string are upper case"
+            ]
+        },
+        {
+            "tag": "join",
+            "patterns": [
+                "what is join",
+                "join in python",
+                "join"
+            ],
+            "responses": [
+                "Joins the elements of an iterable to the end of the string"
+            ]
+        },
+        {
+            "tag": "ljust",
+            "patterns": [
+                "what is ljust",
+                "ljust in python",
+                "ljust"
+            ],
+            "responses": [
+                "Returns a left justified version of the string       "
+            ]
+        },
+        {
+            "tag": "strip",
+            "patterns": [
+                "what is strip",
+                "strip in python",
+                "strip"
+            ],
+            "responses": [
+                "The strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end) characters (space is the default leading character to remove)"
+            ]
+        },
+        {
+            "tag": "maketrans",
+            "patterns": [
+                "what is maketrans",
+                "maketrans in python",
+                "maketrans"
+            ],
+            "responses": [
+                "Returns a translation table to be used in translations"
+            ]
+        },
+        {
+            "tag": "partition",
+            "patterns": [
+                "what is partition",
+                "partition in python",
+                "partition"
+            ],
+            "responses": [
+                "Returns a tuple where the string is parted into three parts"
+            ]
+        },
+        {
+            "tag": "rindex",
+            "patterns": [
+                "what is rindex",
+                "rindex in python",
+                "rindex"
+            ],
+            "responses": [
+                "Searches the string for a specified value and returns the last position of where it was found"
+            ]
+        },
+        {
+            "tag": "rjust",
+            "patterns": [
+                "what is rjust",
+                "rjust in python",
+                "rjust"
+            ],
+            "responses": [
+                "Returns a right justified version of the string"
+            ]
+        },
+        {
+            "tag": "rpartition",
+            "patterns": [
+                "what is rpartition",
+                "rpartition in python",
+                "rpartition"
+            ],
+            "responses": [
+                "Returns a tuple where the string is parted into three parts"
+            ]
+        },
+        {
+            "tag": "rsplit",
+            "patterns": [
+                "what is rsplit",
+                "rsplit in python",
+                "rsplit"
+            ],
+            "responses": [
+                "Splits the string at the specified separator, and returns a list"
+            ]
+        },
+        {
+            "tag": "rstrip",
+            "patterns": [
+                "what is rstrip",
+                "rstrip in python",
+                "rstrip"
+            ],
+            "responses": [
+                "Returns a right trim version of the string"
+            ]
+        },
+        {
+            "tag": "split",
+            "patterns": [
+                "what is split",
+                "split in python",
+                "split"
+            ],
+            "responses": [
+                "Splits the string at the specified separator, and returns a list"
+            ]
+        },
+        {
+            "tag": "splitlines",
+            "patterns": [
+                "what is splitlines",
+                "splitlines in python",
+                "splitlines"
+            ],
+            "responses": [
+                "The splitlines() method splits a string into a list, The splitting is done at line breaks"
+            ]
+        },
+        {
+            "tag": "swapcase",
+            "patterns": [
+                "what is swapcase",
+                "swapcase in python",
+                "swapcase"
+            ],
+            "responses": [
+                "The swapcase() method returns a string where all the upper case letters are lower case and vice versa"
+            ]
+        },
+        {
+            "tag": "title",
+            "patterns": [
+                "what is title",
+                "title in python",
+                "title"
+            ],
+            "responses": [
+                "The title() function in python is the Python String Method which is used to convert the first character in each word to Uppercase and remaining characters to Lowercase in the string and returns a new string"
+            ]
+        },
+        {
+            "tag": "translate",
+            "patterns": [
+                "what is translate",
+                "translate in python",
+                "translate"
+            ],
+            "responses": [
+                "Returns a translated string"
+            ]
+        },
+        {
+            "tag": "zfill",
+            "patterns": [
+                "what is zfill",
+                "zfill in python",
+                "zfill"
+            ],
+            "responses": [
+                "Fills the string with a specified number of 0 values at the beginning"
+            ]
+        },
+        {
+            "tag": "copy",
+            "patterns": [
+                "what is copy",
+                "copy in python",
+                "copy"
+            ],
+            "responses": [
+                "Returns a copy of the list"
+            ]
+        },
+        {
+            "tag": "extend",
+            "patterns": [
+                "what is extend",
+                "extend in python",
+                "extend"
+            ],
+            "responses": [
+                "Add the elements of a list (or any iterable), to the end of the current list"
+            ]
+        },
+        {
+            "tag": "insert",
+            "patterns": [
+                "what is insert",
+                "insert in python",
+                "insert"
+            ],
+            "responses": [
+                "Adds an element at the specified position"
+            ]
+        },
+        {
+            "tag": "pop",
+            "patterns": [
+                "what is pop",
+                "pop in python",
+                "pop"
+            ],
+            "responses": [
+                "Removes the element at the specified position"
+            ]
+        },
+        {
+            "tag": "reverse",
+            "patterns": [
+                "what is reverse",
+                "reverse in python",
+                "reverse"
+            ],
+            "responses": [
+                "Removes the first item with the specified value"
+            ]
+        },
+        {
+            "tag": "sort",
+            "patterns": [
+                "what is sort",
+                "sort in python",
+                "sort"
+            ],
+            "responses": [
+                "Sorts the list"
+            ]
+        }
+    ]
 }
