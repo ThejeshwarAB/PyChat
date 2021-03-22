@@ -12,7 +12,6 @@ import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
-
 def aiml(query):
     intents = json.load(codecs.open('./intents.json', 'r', 'utf-8-sig'))
     words = []
@@ -85,6 +84,7 @@ def aiml(query):
 
     # define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
+    
     # checks if model is saved 
     if(path.isdir('tflearn_logs')):
         model.load("model.tflearn")
