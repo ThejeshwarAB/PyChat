@@ -85,7 +85,7 @@ def aiml(query):
     # define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
     
-    # checks if model is saved 
+    # checks if model exists
     if(path.isdir('tflearn_logs')):
         model.load("model.tflearn")
     else:
