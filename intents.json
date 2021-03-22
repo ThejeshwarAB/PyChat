@@ -1,19 +1,20 @@
-{
+﻿{
     "intents": [
         {
             "tag": "greeting",
             "patterns": [
                 "Hi",
-                "Hello",
-                "Good day",
                 "How are you",
-                "Is anyone there"
+                "Is anyone there?",
+                "Hello",
+                "Good day"
             ],
             "responses": [
+                "Hello, thanks for visiting",
                 "Good to see you again",
-                "Hi there, how can i help",
-                "Hello, thanks for visiting"
-            ]
+                "Hi there, how can I help?"
+            ],
+            "context_set": ""
         },
         {
             "tag": "goodbye",
@@ -25,18 +26,18 @@
             "responses": [
                 "See you later, thanks for visiting",
                 "Have a nice day",
-                "Bsye, come back again soon"
+                "Bye! Come back again soon."
             ]
         },
         {
             "tag": "noanswer",
             "patterns": [
-                "<some regex>"
+                "some regex"
             ],
             "responses": [
-                "Sorry",
-                "Try again",
-                "Could not understand"
+                "sorry",
+                "try again",
+                "could not understand"
             ]
         },
         {
@@ -65,6 +66,18 @@
             ]
         },
         {
+            "tag": "intSyntax",
+            "patterns": [
+                "what is the syntax of int",
+                "syntax for integer in python",
+                "integer syntax",
+                "what is the syntax of integer"
+            ],
+            "responses": [
+                "int(x, base)"
+            ]
+        },
+        {
             "tag": "float",
             "patterns": [
                 "what is float",
@@ -74,6 +87,18 @@
             ],
             "responses": [
                 "The float() method returns a floating point number from a number or a string"
+            ]
+        },
+        {
+            "tag": "floatSyntax",
+            "patterns": [
+                "what is the syntax for float",
+                "syntax for float in python",
+                "float syntax",
+                "what is the syntax of float"
+            ],
+            "responses": [
+                "float([x])"
             ]
         },
         {
@@ -88,6 +113,18 @@
             ]
         },
         {
+            "tag": "stringSyntax",
+            "patterns": [
+                "what is the syntax of string",
+                "syntax for sting in python",
+                "string syntax",
+                "what is the syntax of string"
+            ],
+            "responses": [
+                "my_string = 'Hello'"
+            ]
+        },
+        {
             "tag": "return",
             "patterns": [
                 "what is return",
@@ -96,6 +133,18 @@
             ],
             "responses": [
                 "The return statement is used to exit a function and go back to the place from where it was called"
+            ]
+        },
+        {
+            "tag": "returnSyntax",
+            "patterns": [
+                "what is the syntax for return",
+                "syntax for return in python",
+                "return syntax",
+                "what is the syntax of return"
+            ],
+            "responses": [
+                "def fun(): \n\t statement \n\treturn [expression]"
             ]
         },
         {
@@ -110,6 +159,18 @@
             ]
         },
         {
+            "tag": "tupleSyntax",
+            "patterns": [
+                "what is the syntax for tuple",
+                "syntax for tuple in python",
+                "tuple syntax",
+                "what is the syntax of tuple"
+            ],
+            "responses": [
+                "tuple(iterable)"
+            ]
+        },
+        {
             "tag": "complex",
             "patterns": [
                 "complex is tuple",
@@ -118,6 +179,18 @@
             ],
             "responses": [
                 "The complex() method returns a complex number when real and imaginary parts are provided, or it converts a string to a complex number"
+            ]
+        },
+        {
+            "tag": "complexSyntax",
+            "patterns": [
+                "what is the syntax for complex",
+                "syntax for complex in python",
+                "complex syntax",
+                "what is the syntax of complex"
+            ],
+            "responses": [
+                "complex([real[, imag]])"
             ]
         },
         {
@@ -132,6 +205,18 @@
             ]
         },
         {
+            "tag": "compileSyntax",
+            "patterns": [
+                "what is the syntax for compile",
+                "syntax for compile in python",
+                "compile syntax",
+                "what is the syntax of compile"
+            ],
+            "responses": [
+                "compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)"
+            ]
+        },
+        {
             "tag": "if",
             "patterns": [
                 "what is if",
@@ -140,6 +225,18 @@
             ],
             "responses": [
                 " the program evaluates the test expression and will execute statement(s) only if the test expression is True, If the test expression is False, the statement(s) is not executed"
+            ]
+        },
+        {
+            "tag": "ifSyntax",
+            "patterns": [
+                "what is the syntax for if",
+                "syntax for if in python",
+                "if syntax",
+                "what is the syntax of if"
+            ],
+            "responses": [
+                "if test expression:\n\tstatement(s)"
             ]
         },
         {
@@ -154,6 +251,18 @@
             ]
         },
         {
+            "tag": "ifSyntax",
+            "patterns": [
+                "what is the syntax for if",
+                "syntax for if in python",
+                "if syntax",
+                "what is the syntax of if"
+            ],
+            "responses": [
+                "if test expression:\n\tBody of if\nelse:\n\tBody of else"
+            ]
+        },
+        {
             "tag": "if elif else",
             "patterns": [
                 "what is if elif else",
@@ -162,6 +271,18 @@
             ],
             "responses": [
                 "If the condition for if is False, it checks the condition of the next elif block and so on, If all the conditions are False, the body of else is executed, Only one block among the several if...elif...else blocks is executed according to the condition, The if block can have only one else block. But it can have multiple elif blocks "
+            ]
+        },
+        {
+            "tag": "if elif elseSyntax",
+            "patterns": [
+                "what is the syntax for if elif else",
+                "syntax for if elif else in python",
+                "if elif else syntax",
+                "what is the syntax of if elif else"
+            ],
+            "responses": [
+                "if test expression:\n\tBody of if\nelif test expression:\n\tBody of elif\nelse:\n\tBody of else"
             ]
         },
         {
@@ -176,6 +297,18 @@
             ]
         },
         {
+            "tag": "forSyntax",
+            "patterns": [
+                "what is the syntax for for",
+                "syntax for for in python",
+                "for syntax",
+                "what is the syntax of for"
+            ],
+            "responses": [
+                "for val in sequence:\n\tBody of for"
+            ]
+        },
+        {
             "tag": "while",
             "patterns": [
                 "what is while",
@@ -184,6 +317,18 @@
             ],
             "responses": [
                 "The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true"
+            ]
+        },
+        {
+            "tag": "whileSyntax ",
+            "patterns": [
+                "what is the syntax for while",
+                "syntax for while in python",
+                "while syntax",
+                "what is the syntax of while"
+            ],
+            "responses": [
+                "while test_expression:\n\tBody of while"
             ]
         },
         {
@@ -198,6 +343,18 @@
             ]
         },
         {
+            "tag": "breakSyntax",
+            "patterns": [
+                "what is the syntax for break",
+                "syntax for break in python",
+                "break syntax",
+                "what is the syntax of break"
+            ],
+            "responses": [
+                "break"
+            ]
+        },
+        {
             "tag": "continue",
             "patterns": [
                 "what is continue",
@@ -206,6 +363,18 @@
             ],
             "responses": [
                 "The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration"
+            ]
+        },
+        {
+            "tag": "continueSyntax",
+            "patterns": [
+                "what is the syntax for continue",
+                "syntax for continue in python",
+                "continue syntax",
+                "what is the syntax of continue"
+            ],
+            "responses": [
+                "continue"
             ]
         },
         {
@@ -220,18 +389,43 @@
             ]
         },
         {
+            "tag": "passSyntax",
+            "patterns": [
+                "what is the syntax for pass",
+                "syntax for pass in python",
+                "pass syntax",
+                "what is the syntax of pass"
+            ],
+            "responses": [
+                "pass"
+            ]
+        },
+        {
             "tag": "range",
             "patterns": [
                 "what is range",
                 "range in python",
-                "range"
+                " range"
             ],
             "responses": [
                 "The range() type returns an immutable sequence of numbers between the given start integer to the stop integer"
             ]
         },
         {
-            "tag": "function",
+            "tag": "rangeSyntax",
+            "patterns": [
+                "what is the syntax for range",
+                "syntax for range in python",
+                "range syntax",
+                "what is the syntax of range"
+            ],
+            "responses": [
+                "range(stop)",
+                "range(start, stop[, step])"
+            ]
+        },
+        {
+            "tag": "function ",
             "patterns": [
                 "what is function",
                 "function in python",
@@ -240,6 +434,18 @@
             "responses": [
                 "n Python, a function is a group of related statements that performs a specific task",
                 "Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable"
+            ]
+        },
+        {
+            "tag": "functionSyntax",
+            "patterns": [
+                "what is the syntax for function",
+                "syntax for function in python",
+                "function syntax",
+                "what is the syntax of function"
+            ],
+            "responses": [
+                "def function_name(parameters):\n\tstatement(s)"
             ]
         },
         {
@@ -254,6 +460,18 @@
             ]
         },
         {
+            "tag": "argsSyntax",
+            "patterns": [
+                "what is the syntax for args",
+                "syntax for args in python",
+                "args syntax",
+                "what is the syntax of args"
+            ],
+            "responses": [
+                "*args"
+            ]
+        },
+        {
             "tag": "kwargs",
             "patterns": [
                 "what is kwargs",
@@ -262,6 +480,18 @@
             ],
             "responses": [
                 "The special syntax **kwargs in function definitions in python is used to pass a keyworded, variable-length argument list. We use the name kwargs with the double star"
+            ]
+        },
+        {
+            "tag": "kwargsSyntax",
+            "patterns": [
+                "what is the syntax for kwargs",
+                "syntax for kwargs in python",
+                "kwargs syntax",
+                "what is the syntax of kwargs"
+            ],
+            "responses": [
+                "**kwargs"
             ]
         },
         {
@@ -276,6 +506,18 @@
             ]
         },
         {
+            "tag": "lambdaSyntax",
+            "patterns": [
+                "what is the syntax for lambda",
+                "syntax for lambda in python",
+                "lambda syntax",
+                "what is the syntax of lambda"
+            ],
+            "responses": [
+                "lambda arguments: expression"
+            ]
+        },
+        {
             "tag": "filter",
             "patterns": [
                 "what is filter",
@@ -284,6 +526,18 @@
             ],
             "responses": [
                 "The filter() method constructs an iterator from elements of an iterable for which a function returns true"
+            ]
+        },
+        {
+            "tag": "filterSyntax",
+            "patterns": [
+                "what is the syntax for filter",
+                "syntax for filter in python",
+                "filter syntax",
+                "what is the syntax of filter"
+            ],
+            "responses": [
+                "filter(function, iterable)"
             ]
         },
         {
@@ -298,6 +552,18 @@
             ]
         },
         {
+            "tag": "upperSyntax",
+            "patterns": [
+                "what is the syntax for upper",
+                "syntax for upper in python",
+                "upper syntax",
+                "what is the syntax of upper"
+            ],
+            "responses": [
+                "string.upper()"
+            ]
+        },
+        {
             "tag": "print",
             "patterns": [
                 "what is print",
@@ -306,6 +572,18 @@
             ],
             "responses": [
                 "The print() function prints the given object to the standard output device (screen) or to the text stream file"
+            ]
+        },
+        {
+            "tag": "printSyntax",
+            "patterns": [
+                "what is the syntax for print",
+                "syntax for print in python",
+                "print syntax",
+                "what is the syntax of print"
+            ],
+            "responses": [
+                "print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)"
             ]
         },
         {
@@ -320,6 +598,18 @@
             ]
         },
         {
+            "tag": "mapSyntax",
+            "patterns": [
+                "what is the syntax for map",
+                "syntax for map in python",
+                "map syntax",
+                "what is the syntax of map"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
             "tag": "abs",
             "patterns": [
                 "what is abs",
@@ -328,6 +618,18 @@
             ],
             "responses": [
                 "The abs() method returns the absolute value of the given number. If the number is a complex number, abs() returns its magnitude"
+            ]
+        },
+        {
+            "tag": "absSyntax",
+            "patterns": [
+                "what is the syntax for abs",
+                "syntax for abs in python",
+                "abs syntax",
+                "what is the syntax of abs"
+            ],
+            "responses": [
+                "abs(x)"
             ]
         },
         {
@@ -342,6 +644,18 @@
             ]
         },
         {
+            "tag": "roundSyntax",
+            "patterns": [
+                "what is the syntax for round",
+                "syntax for round in python",
+                "round syntax",
+                "what is the syntax of round"
+            ],
+            "responses": [
+                "round(number, digits) "
+            ]
+        },
+        {
             "tag": "min",
             "patterns": [
                 "what is min",
@@ -350,6 +664,19 @@
             ],
             "responses": [
                 "The Python min() function returns the smallest item in an iterable. It can also be used to find the smallest item between two or more parameters"
+            ]
+        },
+        {
+            "tag": "minSyntax",
+            "patterns": [
+                "what is the syntax for min",
+                "syntax for min in python",
+                "min syntax",
+                "what is the syntax of min"
+            ],
+            "responses": [
+                "min(iterable, *[, key, default])",
+                " min(arg1, arg2, *args[, key])"
             ]
         },
         {
@@ -364,6 +691,18 @@
             ]
         },
         {
+            "tag": "maxSyntax",
+            "patterns": [
+                "what is the syntax for max",
+                "syntax for max in python",
+                "max syntax",
+                "what is the syntax of max"
+            ],
+            "responses": [
+                "max(iterable)"
+            ]
+        },
+        {
             "tag": "sorted",
             "patterns": [
                 "what is sorted",
@@ -372,6 +711,18 @@
             ],
             "responses": [
                 "The sorted() function returns a sorted list from the items in an iterable"
+            ]
+        },
+        {
+            "tag": "sortedSyntax",
+            "patterns": [
+                "what is the syntax for sorted",
+                "syntax for sorted in python",
+                "sorted syntax",
+                "what is the syntax of sorted"
+            ],
+            "responses": [
+                "sorted(iterable, *, key=None, reverse=False)"
             ]
         },
         {
@@ -386,6 +737,18 @@
             ]
         },
         {
+            "tag": "lowerSyntax",
+            "patterns": [
+                "what is the syntax for lower",
+                "syntax for lower in python",
+                "lower syntax",
+                "what is the syntax of lower"
+            ],
+            "responses": [
+                "string.lower()"
+            ]
+        },
+        {
             "tag": "sum",
             "patterns": [
                 "what is sum",
@@ -394,6 +757,18 @@
             ],
             "responses": [
                 "The sum() function adds the items of an iterable and returns the sum"
+            ]
+        },
+        {
+            "tag": "sumSyntax",
+            "patterns": [
+                "what is the syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "sum(iterable, /, start=0)"
             ]
         },
         {
@@ -408,6 +783,19 @@
             ]
         },
         {
+            "tag": "typeSyntax",
+            "patterns": [
+                "what is the syntax for type",
+                "syntax for type in python",
+                "type syntax",
+                "what is the syntax of type"
+            ],
+            "responses": [
+                "type(name, bases, dict)",
+                "type(object)"
+            ]
+        },
+        {
             "tag": "append",
             "patterns": [
                 "what is append",
@@ -416,6 +804,18 @@
             ],
             "responses": [
                 "Adds an element at the end of the list"
+            ]
+        },
+        {
+            "tag": "appendSyntax",
+            "patterns": [
+                "what is the syntax for append",
+                "syntax for append in python",
+                "append syntax",
+                "what is the syntax of append"
+            ],
+            "responses": [
+                "list.append(elmnt)"
             ]
         },
         {
@@ -430,6 +830,18 @@
             ]
         },
         {
+            "tag": "lstripSyntax",
+            "patterns": [
+                "what is the syntax for lstrip",
+                "syntax for lstrip in python",
+                "lstrip syntax",
+                "what is the syntax of lstrip"
+            ],
+            "responses": [
+                "string.lstrip(characters)"
+            ]
+        },
+        {
             "tag": "replace",
             "patterns": [
                 "what is replace",
@@ -441,25 +853,61 @@
             ]
         },
         {
+            "tag": "replaceSyntax",
+            "patterns": [
+                "what is the syntax for replace",
+                "syntax for replace in python",
+                "replace syntax",
+                "what is the syntax of replace"
+            ],
+            "responses": [
+                "string.replace(oldvalue, newvalue, count)"
+            ]
+        },
+        {
             "tag": "split",
             "patterns": [
-                "what is ",
-                " in python",
-                ""
+                "what is split",
+                "split in python",
+                "split"
             ],
             "responses": [
                 "The split() method breaks up a string at the specified separator and returns a list of strings"
             ]
         },
         {
+            "tag": "splitSyntax",
+            "patterns": [
+                "what is the syntax for split",
+                "syntax for split in python",
+                "split syntax",
+                "what is the syntax of split"
+            ],
+            "responses": [
+                "string.split(separator, maxsplit)"
+            ]
+        },
+        {
             "tag": "join",
             "patterns": [
-                "what is ",
-                " in python",
-                ""
+                "what is join",
+                "join in python",
+                "join"
             ],
             "responses": [
                 "The join() string method returns a string by joining all the elements of an iterable, separated by a string separator"
+            ]
+        },
+        {
+            "tag": "joinSyntax",
+            "patterns": [
+                "what is the syntax for join",
+                "syntax for join in python",
+                "join syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "string.join(iterable)"
             ]
         },
         {
@@ -474,6 +922,18 @@
             ]
         },
         {
+            "tag": "removeSyntax",
+            "patterns": [
+                "what is the syntax for remove",
+                "syntax for remove in python",
+                "remove syntax",
+                "what is the syntax of remove"
+            ],
+            "responses": [
+                "list.remove(elmnt)"
+            ]
+        },
+        {
             "tag": "count",
             "patterns": [
                 "what is count",
@@ -482,6 +942,18 @@
             ],
             "responses": [
                 "The string count() method returns the number of occurrences of a substring in the given string"
+            ]
+        },
+        {
+            "tag": "countSyntax",
+            "patterns": [
+                "what is the syntax for count",
+                "syntax for count in python",
+                "count syntax",
+                "what is the syntax of count"
+            ],
+            "responses": [
+                "list.count(value) "
             ]
         },
         {
@@ -496,6 +968,18 @@
             ]
         },
         {
+            "tag": "clearSyntax",
+            "patterns": [
+                "what is the syntax for clear",
+                "syntax for clear in python",
+                "clear syntax",
+                "what is the syntax of clear"
+            ],
+            "responses": [
+                "dictionary.clear()"
+            ]
+        },
+        {
             "tag": "keys",
             "patterns": [
                 "what is keys",
@@ -504,6 +988,18 @@
             ],
             "responses": [
                 "The keys() method returns a view object. The view object contains the keys of the dictionary, as a list. The view object will reflect any changes done to the dictionary"
+            ]
+        },
+        {
+            "tag": "keysSyntax",
+            "patterns": [
+                "what is the syntax for keys",
+                "syntax for keys in python",
+                "keys syntax",
+                "what is the syntax of keys"
+            ],
+            "responses": [
+                "dictionary.keys()"
             ]
         },
         {
@@ -518,6 +1014,18 @@
             ]
         },
         {
+            "tag": "valuesSyntax",
+            "patterns": [
+                "what is the syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "dictionary.values() "
+            ]
+        },
+        {
             "tag": "str",
             "patterns": [
                 "what is str",
@@ -529,14 +1037,38 @@
             ]
         },
         {
+            "tag": "strSyntax",
+            "patterns": [
+                "what is the syntax for str",
+                "syntax for str in python",
+                "str syntax",
+                "what is the syntax of str"
+            ],
+            "responses": [
+                "str(object, encoding=encoding, errors=errors)"
+            ]
+        },
+        {
             "tag": "all",
             "patterns": [
-                "what is all",
+                "what is the what is all",
                 "all in python",
                 "all"
             ],
             "responses": [
                 "The all() method returns True when all elements in the given iterable are true. If not, it returns False"
+            ]
+        },
+        {
+            "tag": "allSyntax",
+            "patterns": [
+                "what is the syntax for all",
+                "syntax for all in python",
+                "all syntax",
+                "what is the syntax of all"
+            ],
+            "responses": [
+                "all(iterable)"
             ]
         },
         {
@@ -551,6 +1083,18 @@
             ]
         },
         {
+            "tag": "anySyntax",
+            "patterns": [
+                "what is the syntax for any",
+                "syntax for any in python",
+                "any syntax",
+                "what is the syntax of any"
+            ],
+            "responses": [
+                "any(iterable)"
+            ]
+        },
+        {
             "tag": "ascii",
             "patterns": [
                 "what is ascii",
@@ -558,7 +1102,19 @@
                 "ascii"
             ],
             "responses": [
-                "The ascii() method returns a string containing a printable representation of an object. It escapes the non-ASCII characters in the string using escapes"
+                "The ascii method returns a string containing a printable representation of an object. It escapes the non-ASCII characters in the string using \\x,\\u or\\U escapes"
+            ]
+        },
+        {
+            "tag": "asciiSyntax",
+            "patterns": [
+                "what is the syntax for ascii",
+                "syntax for ascii in python",
+                "ascii syntax",
+                "what is the syntax of ascii"
+            ],
+            "responses": [
+                "ascii(object)"
             ]
         },
         {
@@ -573,6 +1129,18 @@
             ]
         },
         {
+            "tag": "binSyntax",
+            "patterns": [
+                "syntax for bin",
+                "syntax for bin in python",
+                "bin syntax",
+                "what is the syntax of bin"
+            ],
+            "responses": [
+                "bin(x)"
+            ]
+        },
+        {
             "tag": "bool",
             "patterns": [
                 "what is bool",
@@ -581,6 +1149,18 @@
             ],
             "responses": [
                 "The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure"
+            ]
+        },
+        {
+            "tag": "boolSyntax",
+            "patterns": [
+                "syntax for bool",
+                "syntax for bool in python",
+                "bool syntax",
+                "what is the syntax of bool"
+            ],
+            "responses": [
+                "bool([x])"
             ]
         },
         {
@@ -595,6 +1175,18 @@
             ]
         },
         {
+            "tag": "bytearraySyntax",
+            "patterns": [
+                "syntax for bytearray",
+                "syntax for bytearray in python",
+                "bytearray syntax",
+                "what is the syntax of bytearray"
+            ],
+            "responses": [
+                "bytes([source[, encoding[, errors]]])"
+            ]
+        },
+        {
             "tag": "bytes",
             "patterns": [
                 "what is bytes",
@@ -603,6 +1195,18 @@
             ],
             "responses": [
                 "Return a new “bytes” object, which is an immutable sequence of integers in the range 0 <= x < 256. bytes is an immutable version of bytearray – it has the same non-mutating methods and the same indexing and slicing behavior"
+            ]
+        },
+        {
+            "tag": "bytesSyntax",
+            "patterns": [
+                "syntax for bytes",
+                "syntax for bytes in python",
+                "bytes syntax",
+                "what is the syntax of bytes"
+            ],
+            "responses": [
+                "bytes([source[, encoding[, errors]]])"
             ]
         },
         {
@@ -617,6 +1221,18 @@
             ]
         },
         {
+            "tag": "callableSyntax",
+            "patterns": [
+                "syntax for callable",
+                "syntax for callable in python",
+                "callable syntax",
+                "what is the syntax of callable"
+            ],
+            "responses": [
+                "callable(object)"
+            ]
+        },
+        {
             "tag": "chr",
             "patterns": [
                 "what is chr in python?",
@@ -625,6 +1241,18 @@
             ],
             "responses": [
                 "Return the string representing a character whose Unicode code point is the integer i. For example, chr(97) returns the string 'a', while chr(8364) returns the string '€' "
+            ]
+        },
+        {
+            "tag": "chrSyntax",
+            "patterns": [
+                "syntax for chr",
+                "syntax for chr in python",
+                "chr syntax",
+                "what is the syntax of chr"
+            ],
+            "responses": [
+                "chr(i)"
             ]
         },
         {
@@ -639,6 +1267,18 @@
             ]
         },
         {
+            "tag": "classmethodSyntax",
+            "patterns": [
+                "syntax for classmethod",
+                "syntax for classmethod in python",
+                "classmethod syntax",
+                "what is the syntax of classmethod"
+            ],
+            "responses": [
+                "@classmethod"
+            ]
+        },
+        {
             "tag": "delattr",
             "patterns": [
                 "what is ",
@@ -647,6 +1287,18 @@
             ],
             "responses": [
                 "This is a relative of setattr(). The arguments are an object and a string. The string must be the name of one of the object’s attributes. The function deletes the named attribute, provided the object allows it. For example, delattr(x, 'foobar') is equivalent to del x.foobar"
+            ]
+        },
+        {
+            "tag": "delattrSyntax",
+            "patterns": [
+                "syntax for delattr",
+                "syntax for delattr in python",
+                "delattr syntax",
+                "what is the syntax of delattr"
+            ],
+            "responses": [
+                "delattr(object, name)"
             ]
         },
         {
@@ -661,6 +1313,18 @@
             ]
         },
         {
+            "tag": "dictSyntax",
+            "patterns": [
+                "syntax for dict",
+                "syntax for dict in python",
+                "dict syntax",
+                "what is the syntax of dict"
+            ],
+            "responses": [
+                ""
+            ]
+        },
+        {
             "tag": "dir",
             "patterns": [
                 "what is ",
@@ -672,14 +1336,38 @@
             ]
         },
         {
+            "tag": "dirSyntax",
+            "patterns": [
+                "syntax for dir",
+                "syntax for dir in python",
+                "dir syntax",
+                "what is the syntax of dir"
+            ],
+            "responses": [
+                "dir([object])"
+            ]
+        },
+        {
             "tag": "divmod",
             "patterns": [
-                "what is ",
-                " in python",
-                ""
+                "what is divmod",
+                "divmod in python",
+                "divmod"
             ],
             "responses": [
                 "The divmod() method takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder"
+            ]
+        },
+        {
+            "tag": "divmodSyntax",
+            "patterns": [
+                "syntax for divmod",
+                "syntax for divmod in python",
+                "divmod syntax",
+                "what is the syntax of divmod"
+            ],
+            "responses": [
+                "divmod(a, b)"
             ]
         },
         {
@@ -694,6 +1382,18 @@
             ]
         },
         {
+            "tag": "enumerateSyntax",
+            "patterns": [
+                "syntax for enumerate",
+                "syntax for enumerate in python",
+                "enumerate syntax",
+                "what is the syntax of enumerate"
+            ],
+            "responses": [
+                "enumerate(iterable, start=0)"
+            ]
+        },
+        {
             "tag": "eval",
             "patterns": [
                 "what is eval",
@@ -702,6 +1402,18 @@
             ],
             "responses": [
                 "The eval() method parses the expression passed to this method and runs python expression (code) within the program"
+            ]
+        },
+        {
+            "tag": "evalSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "eval(expression[, globals[, locals]])"
             ]
         },
         {
@@ -716,6 +1428,18 @@
             ]
         },
         {
+            "tag": "execSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "exec(object[, globals[, locals]])"
+            ]
+        },
+        {
             "tag": "filter",
             "patterns": [
                 "what is filter",
@@ -727,6 +1451,18 @@
             ]
         },
         {
+            "tag": "filterSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "filter(function, iterable)"
+            ]
+        },
+        {
             "tag": "format",
             "patterns": [
                 "what is format",
@@ -735,6 +1471,18 @@
             ],
             "responses": [
                 "The built-in format() method returns a formatted representation of the given value controlled by the format specifier"
+            ]
+        },
+        {
+            "tag": "formatSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "format(value[, format_spec])"
             ]
         },
         {
@@ -749,6 +1497,18 @@
             ]
         },
         {
+            "tag": "frozensetSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "frozenset([iterable])"
+            ]
+        },
+        {
             "tag": "getattr",
             "patterns": [
                 "what is getattr",
@@ -757,6 +1517,18 @@
             ],
             "responses": [
                 "The getattr() method returns the value of the named attribute of an object. If not found, it returns the default value provided to the function"
+            ]
+        },
+        {
+            "tag": "getattrSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "getattr(object, name[, default])"
             ]
         },
         {
@@ -771,6 +1543,18 @@
             ]
         },
         {
+            "tag": "globalsSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "globals()"
+            ]
+        },
+        {
             "tag": "hasattr",
             "patterns": [
                 "what is hasattr",
@@ -779,6 +1563,18 @@
             ],
             "responses": [
                 "The hasattr() method returns true if an object has the given named attribute and false if it does not"
+            ]
+        },
+        {
+            "tag": "hasattrSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "hasattr(object, name)"
             ]
         },
         {
@@ -793,6 +1589,18 @@
             ]
         },
         {
+            "tag": "hashSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "hash(object)"
+            ]
+        },
+        {
             "tag": "help",
             "patterns": [
                 "what is help",
@@ -801,6 +1609,18 @@
             ],
             "responses": [
                 "The help() method calls the built-in Python help system"
+            ]
+        },
+        {
+            "tag": "helpSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "help([object])"
             ]
         },
         {
@@ -815,6 +1635,18 @@
             ]
         },
         {
+            "tag": "hexSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "hex(x)"
+            ]
+        },
+        {
             "tag": "id",
             "patterns": [
                 "what is id",
@@ -823,6 +1655,18 @@
             ],
             "responses": [
                 "The id() function returns identity (unique integer) of an object"
+            ]
+        },
+        {
+            "tag": "idSyntax",
+            "patterns": [
+                "syntax for id",
+                "syntax for id in python",
+                "id syntax",
+                "what is the syntax of id"
+            ],
+            "responses": [
+                "id(object)"
             ]
         },
         {
@@ -837,6 +1681,18 @@
             ]
         },
         {
+            "tag": "inputSyntax",
+            "patterns": [
+                "syntax for input",
+                "syntax for input in python",
+                "input syntax",
+                "what is the syntax of input"
+            ],
+            "responses": [
+                "input([prompt])"
+            ]
+        },
+        {
             "tag": "isinstance",
             "patterns": [
                 "what is isinstance",
@@ -845,6 +1701,18 @@
             ],
             "responses": [
                 "The isinstance() function checks if the object (first argument) is an instance or subclass of classinfo class (second argument)"
+            ]
+        },
+        {
+            "tag": "isinstanceSyntax",
+            "patterns": [
+                "syntax for isinstance",
+                "syntax for isinstance in python",
+                "isinstance syntax",
+                "what is the syntax of isinstance"
+            ],
+            "responses": [
+                "isinstance(object, classinfo)"
             ]
         },
         {
@@ -859,6 +1727,18 @@
             ]
         },
         {
+            "tag": "issubclassSyntax",
+            "patterns": [
+                "syntax for issubclass",
+                "syntax for issubclass in python",
+                "issubclass syntax",
+                "what is the syntax of issubclass"
+            ],
+            "responses": [
+                "issubclass(class, classinfo)"
+            ]
+        },
+        {
             "tag": "iter",
             "patterns": [
                 "what is iter",
@@ -867,6 +1747,18 @@
             ],
             "responses": [
                 "The Python iter() function returns an iterator for the given object"
+            ]
+        },
+        {
+            "tag": "iterSyntax",
+            "patterns": [
+                "syntax for iter",
+                "syntax for iter in python",
+                "iter syntax",
+                "what is the syntax of iter"
+            ],
+            "responses": [
+                "iter(object[, sentinel])"
             ]
         },
         {
@@ -881,7 +1773,19 @@
             ]
         },
         {
-            "tag": "memoryview()",
+            "tag": "listSyntax",
+            "patterns": [
+                "syntax for list",
+                "syntax for list in python",
+                "list syntax",
+                "what is the syntax of list"
+            ],
+            "responses": [
+                " class list([iterable])"
+            ]
+        },
+        {
+            "tag": "memoryview",
             "patterns": [
                 "what is memoryview()",
                 "memoryview() in python",
@@ -889,6 +1793,18 @@
             ],
             "responses": [
                 "The memoryview() function returns a memory view object of the given argument"
+            ]
+        },
+        {
+            "tag": "memoryviewSyntax",
+            "patterns": [
+                "syntax for memoryview",
+                "syntax for memoryview in python",
+                "memoryview syntax",
+                "what is the syntax of memoryview"
+            ],
+            "responses": [
+                "memoryview(obj)"
             ]
         },
         {
@@ -903,6 +1819,18 @@
             ]
         },
         {
+            "tag": "nextSyntax",
+            "patterns": [
+                "syntax for next",
+                "syntax for next in python",
+                "next syntax",
+                "what is the syntax of next"
+            ],
+            "responses": [
+                "next(iterator[, default])"
+            ]
+        },
+        {
             "tag": "locals",
             "patterns": [
                 "what is locals",
@@ -911,6 +1839,18 @@
             ],
             "responses": [
                 "The locals() method updates and returns a dictionary of the current local symbol table"
+            ]
+        },
+        {
+            "tag": "localsSyntax",
+            "patterns": [
+                "syntax for locals",
+                "syntax for locals in python",
+                "locals syntax",
+                "what is the syntax of locals"
+            ],
+            "responses": [
+                "locals()"
             ]
         },
         {
@@ -925,6 +1865,18 @@
             ]
         },
         {
+            "tag": "objectSyntax",
+            "patterns": [
+                "syntax for object",
+                "syntax for object in python",
+                "object syntax",
+                "what is the syntax of object"
+            ],
+            "responses": [
+                "o = object()"
+            ]
+        },
+        {
             "tag": "len",
             "patterns": [
                 "what is len",
@@ -933,6 +1885,18 @@
             ],
             "responses": [
                 "The len() function returns the number of items (length) in an object"
+            ]
+        },
+        {
+            "tag": "lenSyntax",
+            "patterns": [
+                "syntax for len",
+                "syntax for len in python",
+                "len syntax",
+                "what is the syntax of len"
+            ],
+            "responses": [
+                "len(s)"
             ]
         },
         {
@@ -947,6 +1911,18 @@
             ]
         },
         {
+            "tag": "octSyntax",
+            "patterns": [
+                "syntax for oct",
+                "syntax for oct in python",
+                "oct syntax",
+                "what is the syntax of oct"
+            ],
+            "responses": [
+                "oct(x)"
+            ]
+        },
+        {
             "tag": "open",
             "patterns": [
                 "what is open",
@@ -955,6 +1931,18 @@
             ],
             "responses": [
                 "The open() function opens the file (if possible) and returns the corresponding file object"
+            ]
+        },
+        {
+            "tag": "openSyntax",
+            "patterns": [
+                "syntax for open",
+                "syntax for open in python",
+                "open syntax",
+                "what is the syntax of open"
+            ],
+            "responses": [
+                "open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)"
             ]
         },
         {
@@ -969,6 +1957,18 @@
             ]
         },
         {
+            "tag": "ordSyntax",
+            "patterns": [
+                "syntax for ord",
+                "syntax for ord in python",
+                "ord syntax",
+                "what is the syntax of ord"
+            ],
+            "responses": [
+                "ord(c)"
+            ]
+        },
+        {
             "tag": "pow",
             "patterns": [
                 "what is pow",
@@ -977,6 +1977,18 @@
             ],
             "responses": [
                 "The pow() function returns the power of a number"
+            ]
+        },
+        {
+            "tag": "powSyntax",
+            "patterns": [
+                "syntax for pow",
+                "syntax for pow in python",
+                "pow syntax",
+                "what is the syntax of pow"
+            ],
+            "responses": [
+                "pow(x, y)"
             ]
         },
         {
@@ -991,6 +2003,18 @@
             ]
         },
         {
+            "tag": "propertySyntax",
+            "patterns": [
+                "syntax for property",
+                "syntax for property in python",
+                "property syntax",
+                "what is the syntax of property"
+            ],
+            "responses": [
+                "property(fget=None, fset=None, fdel=None, doc=None)"
+            ]
+        },
+        {
             "tag": "repr",
             "patterns": [
                 "what is repr",
@@ -999,6 +2023,18 @@
             ],
             "responses": [
                 "The repr() function returns a printable representation of the given object"
+            ]
+        },
+        {
+            "tag": "reprSyntax",
+            "patterns": [
+                "syntax for repr",
+                "syntax for repr in python",
+                "repr syntax",
+                "what is the syntax of repr"
+            ],
+            "responses": [
+                "repr(object)"
             ]
         },
         {
@@ -1013,6 +2049,18 @@
             ]
         },
         {
+            "tag": "reservedSyntax",
+            "patterns": [
+                "syntax for reserved",
+                "syntax for reserved in python",
+                "reserved syntax",
+                "what is the syntax of reserved"
+            ],
+            "responses": [
+                "reversed(seq)"
+            ]
+        },
+        {
             "tag": "round",
             "patterns": [
                 "what is round",
@@ -1021,6 +2069,18 @@
             ],
             "responses": [
                 "The round() function returns a floating-point number rounded to the specified number of decimals"
+            ]
+        },
+        {
+            "tag": "roundSyntax",
+            "patterns": [
+                "syntax for round",
+                "syntax for round in python",
+                "round syntax",
+                "what is the syntax of round"
+            ],
+            "responses": [
+                "round(number[, ndigits])"
             ]
         },
         {
@@ -1035,6 +2095,18 @@
             ]
         },
         {
+            "tag": "setSyntax",
+            "patterns": [
+                "syntax for set",
+                "syntax for set in python",
+                "set syntax",
+                "what is the syntax of set"
+            ],
+            "responses": [
+                "set([iterable])"
+            ]
+        },
+        {
             "tag": "setattr",
             "patterns": [
                 "what is setattr",
@@ -1043,6 +2115,18 @@
             ],
             "responses": [
                 "The setattr() function sets the value of the attribute of an object"
+            ]
+        },
+        {
+            "tag": "setattrSyntax",
+            "patterns": [
+                "syntax for setattr",
+                "syntax for setattr in python",
+                "setattr syntax",
+                "what is the syntax of setattr"
+            ],
+            "responses": [
+                "setattr(object, name, value)"
             ]
         },
         {
@@ -1057,6 +2141,19 @@
             ]
         },
         {
+            "tag": "sliceSyntax",
+            "patterns": [
+                "syntax for slice",
+                "syntax for slice in python",
+                "slice syntax",
+                "what is the syntax of slice"
+            ],
+            "responses": [
+                "slice(start, stop[, step])",
+                "slice(stop)"
+            ]
+        },
+        {
             "tag": "staticmethod",
             "patterns": [
                 "what is staticmethod",
@@ -1065,6 +2162,18 @@
             ],
             "responses": [
                 "The staticmethod() built-in function returns a static method for a given function"
+            ]
+        },
+        {
+            "tag": "staticmethodSyntax",
+            "patterns": [
+                "syntax for staticmethod",
+                "syntax for staticmethod in python",
+                "staticmethod syntax",
+                "what is the syntax of staticmethod"
+            ],
+            "responses": [
+                "@staticmethod"
             ]
         },
         {
@@ -1079,6 +2188,18 @@
             ]
         },
         {
+            "tag": "superSyntax",
+            "patterns": [
+                "syntax for super",
+                "syntax for super in python",
+                "super syntax",
+                "what is the syntax of super"
+            ],
+            "responses": [
+                "super([type[, object-or-type]])"
+            ]
+        },
+        {
             "tag": "vars",
             "patterns": [
                 "what is vars",
@@ -1087,6 +2208,18 @@
             ],
             "responses": [
                 "The vars() function returns the _dict_ attribute of the given object"
+            ]
+        },
+        {
+            "tag": "varsSyntax",
+            "patterns": [
+                "syntax for vars",
+                "syntax for vars in python",
+                "vars syntax",
+                "what is the syntax of vars"
+            ],
+            "responses": [
+                "vars([object])"
             ]
         },
         {
@@ -1101,6 +2234,18 @@
             ]
         },
         {
+            "tag": "zipSyntax",
+            "patterns": [
+                "syntax for zip",
+                "syntax for zip in python",
+                "zip syntax",
+                "what is the syntax of zip"
+            ],
+            "responses": [
+                "zip(*iterables)"
+            ]
+        },
+        {
             "tag": "capitalize",
             "patterns": [
                 "what is capitalize",
@@ -1109,6 +2254,18 @@
             ],
             "responses": [
                 "the capitalize() method returns a copy of the original string and converts the first character of the string to a capital (uppercase) letter while making all other characters in the string lowercase letters"
+            ]
+        },
+        {
+            "tag": "capitalizeSyntax",
+            "patterns": [
+                "syntax for capitalize",
+                "syntax for capitalize in python",
+                "capitalize syntax",
+                "what is the syntax of capitalize"
+            ],
+            "responses": [
+                "string.capitalize()"
             ]
         },
         {
@@ -1123,6 +2280,18 @@
             ]
         },
         {
+            "tag": "casefoldSyntax",
+            "patterns": [
+                "syntax for casefold",
+                "syntax for casefold in python",
+                "casefold syntax",
+                "what is the syntax of casefold"
+            ],
+            "responses": [
+                "string.casefold()"
+            ]
+        },
+        {
             "tag": "center",
             "patterns": [
                 "what is center",
@@ -1131,6 +2300,18 @@
             ],
             "responses": [
                 "The center() method will center align the string, using a specified character (space is default) as the fill character"
+            ]
+        },
+        {
+            "tag": "centerSyntax",
+            "patterns": [
+                "syntax for center",
+                "syntax for center in python",
+                "center syntax",
+                "what is the syntax of center"
+            ],
+            "responses": [
+                "string.center(width[, fillchar])"
             ]
         },
         {
@@ -1145,6 +2326,18 @@
             ]
         },
         {
+            "tag": "encodeSyntax",
+            "patterns": [
+                "syntax for encode",
+                "syntax for encode in python",
+                "encode syntax",
+                "what is the syntax of encode"
+            ],
+            "responses": [
+                "string.encode(encoding='UTF-8',errors='strict')"
+            ]
+        },
+        {
             "tag": "endswith",
             "patterns": [
                 "what is endswith",
@@ -1153,6 +2346,18 @@
             ],
             "responses": [
                 "Returns true if the string ends with the specified value"
+            ]
+        },
+        {
+            "tag": "endswithSyntax",
+            "patterns": [
+                "syntax for endswith",
+                "syntax for endswith in python",
+                "endswith syntax",
+                "what is the syntax of endswith"
+            ],
+            "responses": [
+                "string.endswith(value, start, end)"
             ]
         },
         {
@@ -1167,6 +2372,18 @@
             ]
         },
         {
+            "tag": "expandtabsSyntax",
+            "patterns": [
+                "syntax for expandtabs",
+                "syntax for expandtabs in python",
+                "expandtabs syntax",
+                "what is the syntax of expandtabs"
+            ],
+            "responses": [
+                "list.sort(reverse=True|False, key=myFunc)"
+            ]
+        },
+        {
             "tag": "find",
             "patterns": [
                 "what is find",
@@ -1175,6 +2392,18 @@
             ],
             "responses": [
                 "The find() method returns the index of first occurrence of the substring (if found). If not found, it returns -1"
+            ]
+        },
+        {
+            "tag": "findSyntax",
+            "patterns": [
+                "syntax for find",
+                "syntax for find in python",
+                "find syntax",
+                "what is the syntax of find"
+            ],
+            "responses": [
+                "str.find(sub[, start[, end]] )"
             ]
         },
         {
@@ -1189,6 +2418,18 @@
             ]
         },
         {
+            "tag": "formatSyntax",
+            "patterns": [
+                "syntax for format",
+                "syntax for format in python",
+                "format syntax",
+                "what is the syntax of format"
+            ],
+            "responses": [
+                "format(value[, format_spec])"
+            ]
+        },
+        {
             "tag": "formatmap",
             "patterns": [
                 "what is formatmap",
@@ -1197,6 +2438,18 @@
             ],
             "responses": [
                 "Formats specified values in a string"
+            ]
+        },
+        {
+            "tag": "formatmapSyntax",
+            "patterns": [
+                "syntax for formatmap",
+                "syntax for formatmap in python",
+                "formatmap syntax",
+                "what is the syntax of formatmap"
+            ],
+            "responses": [
+                "str.format_map(mapping)"
             ]
         },
         {
@@ -1211,6 +2464,18 @@
             ]
         },
         {
+            "tag": "indexSyntax",
+            "patterns": [
+                "syntax for index",
+                "syntax for index in python",
+                "index syntax",
+                "what is the syntax of index"
+            ],
+            "responses": [
+                "string.index(value, start, end)"
+            ]
+        },
+        {
             "tag": "isalpha",
             "patterns": [
                 "what is isalpha",
@@ -1219,6 +2484,18 @@
             ],
             "responses": [
                 "Returns True if all characters in the string are in the alphabet"
+            ]
+        },
+        {
+            "tag": "isalphaSyntax",
+            "patterns": [
+                "syntax for isalpha",
+                "syntax for isalpha in python",
+                "isalpha syntax",
+                "what is the syntax of isalpha"
+            ],
+            "responses": [
+                "string.isalpha()"
             ]
         },
         {
@@ -1233,6 +2510,18 @@
             ]
         },
         {
+            "tag": "importSyntax",
+            "patterns": [
+                "syntax for import",
+                "syntax for import in python",
+                "import syntax",
+                "what is the syntax of import"
+            ],
+            "responses": [
+                "_import_(name, globals=None, locals=None, fromlist=(), level=0)"
+            ]
+        },
+        {
             "tag": "isdecimal",
             "patterns": [
                 "what is isdecimal",
@@ -1241,6 +2530,18 @@
             ],
             "responses": [
                 "Returns True if all characters in the string are decimals"
+            ]
+        },
+        {
+            "tag": "isdecimalSyntax",
+            "patterns": [
+                "syntax for isdecimal",
+                "syntax for isdecimal in python",
+                "isdecimal syntax",
+                "what is the syntax of isdecimal"
+            ],
+            "responses": [
+                "string.isdecimal()"
             ]
         },
         {
@@ -1255,6 +2556,18 @@
             ]
         },
         {
+            "tag": "isalnumSyntax",
+            "patterns": [
+                "syntax for isalnum",
+                "syntax for isalnum in python",
+                "isalnum syntax",
+                "what is the syntax of isalnum"
+            ],
+            "responses": [
+                "string.isalnum()"
+            ]
+        },
+        {
             "tag": "isdigit",
             "patterns": [
                 "what is isdigit",
@@ -1263,6 +2576,18 @@
             ],
             "responses": [
                 "Returns True if all characters in the string are digits"
+            ]
+        },
+        {
+            "tag": "isdigitSyntax",
+            "patterns": [
+                "syntax for isdigit",
+                "syntax for isdigit in python",
+                "isdigit syntax",
+                "what is the syntax of isdigit"
+            ],
+            "responses": [
+                "string.isdigit()"
             ]
         },
         {
@@ -1277,6 +2602,18 @@
             ]
         },
         {
+            "tag": "isidentifierSyntax",
+            "patterns": [
+                "syntax for isidentifier",
+                "syntax for isidentifier in python",
+                "isidentifier syntax",
+                "what is the syntax of isidentifier"
+            ],
+            "responses": [
+                "string.isidentifier()"
+            ]
+        },
+        {
             "tag": "islower",
             "patterns": [
                 "what is islower",
@@ -1285,6 +2622,18 @@
             ],
             "responses": [
                 "Returns True if all characters in the string are lower case"
+            ]
+        },
+        {
+            "tag": "islowerSyntax",
+            "patterns": [
+                "syntax for islower",
+                "syntax for islower in python",
+                "islower syntax",
+                "what is the syntax of islower"
+            ],
+            "responses": [
+                "string.islower()"
             ]
         },
         {
@@ -1299,6 +2648,18 @@
             ]
         },
         {
+            "tag": "isnumericSyntax",
+            "patterns": [
+                "syntax for isnumeric",
+                "syntax for isnumeric in python",
+                "isnumeric syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "string.isnumeric()"
+            ]
+        },
+        {
             "tag": "isprintable",
             "patterns": [
                 "what is isprintable",
@@ -1307,6 +2668,18 @@
             ],
             "responses": [
                 "Returns True if all characters in the string are printable"
+            ]
+        },
+        {
+            "tag": "isprintableSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "string.isprintable()"
             ]
         },
         {
@@ -1321,6 +2694,18 @@
             ]
         },
         {
+            "tag": "isspaceSyntax",
+            "patterns": [
+                "syntax for ",
+                "syntax for  in python",
+                " syntax",
+                "what is the syntax of "
+            ],
+            "responses": [
+                "string.isspace()"
+            ]
+        },
+        {
             "tag": "istitle",
             "patterns": [
                 "what is istitle",
@@ -1329,6 +2714,18 @@
             ],
             "responses": [
                 "Returns True if the string follows the rules of a title"
+            ]
+        },
+        {
+            "tag": "istitleSyntax",
+            "patterns": [
+                "syntax for istitle",
+                "syntax for istitle in python",
+                "istitle syntax",
+                "what is the syntax of istitle"
+            ],
+            "responses": [
+                "string.istitle()"
             ]
         },
         {
@@ -1343,6 +2740,18 @@
             ]
         },
         {
+            "tag": "isupperSyntax",
+            "patterns": [
+                "syntax for isupper",
+                "syntax for isupper in python",
+                "isupper syntax",
+                "what is the syntax of isupper"
+            ],
+            "responses": [
+                "string.isupper()"
+            ]
+        },
+        {
             "tag": "join",
             "patterns": [
                 "what is join",
@@ -1354,6 +2763,18 @@
             ]
         },
         {
+            "tag": "joinSyntax",
+            "patterns": [
+                "syntax for join",
+                "syntax for join in python",
+                "join syntax",
+                "what is the syntax of join"
+            ],
+            "responses": [
+                "string.join(iterable)"
+            ]
+        },
+        {
             "tag": "ljust",
             "patterns": [
                 "what is ljust",
@@ -1361,7 +2782,19 @@
                 "ljust"
             ],
             "responses": [
-                "Returns a left justified version of the string       "
+                "Returns a left justified version of the string"
+            ]
+        },
+        {
+            "tag": "ljustSyntax",
+            "patterns": [
+                "syntax for ljust",
+                "syntax for ljust in python",
+                "ljust syntax",
+                "what is the syntax of ljust"
+            ],
+            "responses": [
+                "string.ljust(width[, fillchar])"
             ]
         },
         {
@@ -1376,6 +2809,18 @@
             ]
         },
         {
+            "tag": "stripSyntax",
+            "patterns": [
+                "syntax for strip",
+                "syntax for strip in python",
+                "strip syntax",
+                "what is the syntax of strip"
+            ],
+            "responses": [
+                "string.strip([chars])"
+            ]
+        },
+        {
             "tag": "maketrans",
             "patterns": [
                 "what is maketrans",
@@ -1384,6 +2829,18 @@
             ],
             "responses": [
                 "Returns a translation table to be used in translations"
+            ]
+        },
+        {
+            "tag": "maketransSyntax",
+            "patterns": [
+                "syntax for maketrans",
+                "syntax for maketrans in python",
+                "maketrans syntax",
+                "what is the syntax of maketrans"
+            ],
+            "responses": [
+                "string.maketrans(x[, y[, z]])"
             ]
         },
         {
@@ -1398,6 +2855,18 @@
             ]
         },
         {
+            "tag": "partitionSyntax",
+            "patterns": [
+                "syntax for partition",
+                "syntax for partition in python",
+                "partition syntax",
+                "what is the syntax of partition"
+            ],
+            "responses": [
+                "string.partition(separator)"
+            ]
+        },
+        {
             "tag": "rindex",
             "patterns": [
                 "what is rindex",
@@ -1406,6 +2875,18 @@
             ],
             "responses": [
                 "Searches the string for a specified value and returns the last position of where it was found"
+            ]
+        },
+        {
+            "tag": "rindexSyntax",
+            "patterns": [
+                "syntax for rindex",
+                "syntax for rindex in python",
+                "rindex syntax",
+                "what is the syntax of rindex"
+            ],
+            "responses": [
+                "str.rindex(sub[, start[, end]] )"
             ]
         },
         {
@@ -1420,6 +2901,18 @@
             ]
         },
         {
+            "tag": "rjustSyntax",
+            "patterns": [
+                "syntax for rjust",
+                "syntax for rjust in python",
+                "rjust syntax",
+                "what is the syntax of rjust"
+            ],
+            "responses": [
+                "string.rjust(width[, fillchar])"
+            ]
+        },
+        {
             "tag": "rpartition",
             "patterns": [
                 "what is rpartition",
@@ -1428,6 +2921,18 @@
             ],
             "responses": [
                 "Returns a tuple where the string is parted into three parts"
+            ]
+        },
+        {
+            "tag": "rpartitionSyntax",
+            "patterns": [
+                "syntax for rpartition",
+                "syntax for rpartition in python",
+                "rpartition syntax",
+                "what is the syntax of rpartition"
+            ],
+            "responses": [
+                "string.rpartition(separator)"
             ]
         },
         {
@@ -1442,6 +2947,18 @@
             ]
         },
         {
+            "tag": "rsplitSyntax",
+            "patterns": [
+                "syntax for rsplit",
+                "syntax for rsplit in python",
+                "rsplit syntax",
+                "what is the syntax of rsplit"
+            ],
+            "responses": [
+                "str.rsplit([separator [, maxsplit]])"
+            ]
+        },
+        {
             "tag": "rstrip",
             "patterns": [
                 "what is rstrip",
@@ -1450,6 +2967,18 @@
             ],
             "responses": [
                 "Returns a right trim version of the string"
+            ]
+        },
+        {
+            "tag": "rstripSyntax",
+            "patterns": [
+                "syntax for rstrip",
+                "syntax for rstrip in python",
+                "rstrip syntax",
+                "what is the syntax of rstrip"
+            ],
+            "responses": [
+                "string.rstrip([chars])"
             ]
         },
         {
@@ -1464,6 +2993,19 @@
             ]
         },
         {
+            "tag": "splitSyntax",
+            "patterns": [
+                "syntax for split",
+                "syntax for split in python",
+                "split syntax",
+                "split",
+                "what is the syntax of split"
+            ],
+            "responses": [
+                "str.split([separator [, maxsplit]])"
+            ]
+        },
+        {
             "tag": "splitlines",
             "patterns": [
                 "what is splitlines",
@@ -1472,6 +3014,18 @@
             ],
             "responses": [
                 "The splitlines() method splits a string into a list, The splitting is done at line breaks"
+            ]
+        },
+        {
+            "tag": "splitnessSyntax",
+            "patterns": [
+                "syntax for splitness",
+                "syntax for splitness in python",
+                "splitness syntax",
+                "what is the syntax of splitness"
+            ],
+            "responses": [
+                "str.splitlines( num = string.count('\n'))"
             ]
         },
         {
@@ -1486,6 +3040,18 @@
             ]
         },
         {
+            "tag": "swapcaseSyntax",
+            "patterns": [
+                "syntax for swapcase",
+                "syntax for swapcase in python",
+                "swapcase syntax",
+                "what is the syntax of swapcase"
+            ],
+            "responses": [
+                "str.swapcase()"
+            ]
+        },
+        {
             "tag": "title",
             "patterns": [
                 "what is title",
@@ -1494,6 +3060,18 @@
             ],
             "responses": [
                 "The title() function in python is the Python String Method which is used to convert the first character in each word to Uppercase and remaining characters to Lowercase in the string and returns a new string"
+            ]
+        },
+        {
+            "tag": "titleSyntax",
+            "patterns": [
+                "syntax for title",
+                "syntax for title in python",
+                "title syntax",
+                "what is the syntax of title"
+            ],
+            "responses": [
+                "string.title()"
             ]
         },
         {
@@ -1508,6 +3086,19 @@
             ]
         },
         {
+            "tag": "translateSyntax",
+            "patterns": [
+                "syntax for translate",
+                "syntax for translate in python",
+                "translate syntax",
+                "what is the syntax of translate",
+                "what is the syntax of translate"
+            ],
+            "responses": [
+                "string.translate(table) "
+            ]
+        },
+        {
             "tag": "zfill",
             "patterns": [
                 "what is zfill",
@@ -1516,6 +3107,18 @@
             ],
             "responses": [
                 "Fills the string with a specified number of 0 values at the beginning"
+            ]
+        },
+        {
+            "tag": "zfillSyntax",
+            "patterns": [
+                "syntax for zfill",
+                "syntax for zfill in python",
+                "zfill syntax",
+                "what is the syntax of zfill"
+            ],
+            "responses": [
+                "string.zfill(len) "
             ]
         },
         {
@@ -1530,6 +3133,18 @@
             ]
         },
         {
+            "tag": "copySyntax",
+            "patterns": [
+                "syntax for copy",
+                "syntax for copy in python",
+                "copy syntax",
+                "what is the syntax of copy"
+            ],
+            "responses": [
+                "list.copy() "
+            ]
+        },
+        {
             "tag": "extend",
             "patterns": [
                 "what is extend",
@@ -1538,6 +3153,18 @@
             ],
             "responses": [
                 "Add the elements of a list (or any iterable), to the end of the current list"
+            ]
+        },
+        {
+            "tag": "extendSyntax",
+            "patterns": [
+                "syntax for extend",
+                "syntax for extend in python",
+                "extend syntax",
+                "what is the syntax of extend"
+            ],
+            "responses": [
+                "list.extend(iterable)"
             ]
         },
         {
@@ -1552,6 +3179,18 @@
             ]
         },
         {
+            "tag": "insertSyntax",
+            "patterns": [
+                "syntax for insert",
+                "syntax for insert in python",
+                "insert syntax",
+                "what is the syntax of insert"
+            ],
+            "responses": [
+                "list.insert(pos, elmnt)"
+            ]
+        },
+        {
             "tag": "pop",
             "patterns": [
                 "what is pop",
@@ -1560,6 +3199,18 @@
             ],
             "responses": [
                 "Removes the element at the specified position"
+            ]
+        },
+        {
+            "tag": "popSyntax",
+            "patterns": [
+                "syntax for pop",
+                "syntax for pop in python",
+                "pop syntax",
+                "what is the syntax of pop"
+            ],
+            "responses": [
+                "list.pop(pos)"
             ]
         },
         {
@@ -1574,6 +3225,18 @@
             ]
         },
         {
+            "tag": "reverseSyntax",
+            "patterns": [
+                "syntax for reverse",
+                "syntax for reverse in python",
+                "reverse syntax",
+                "what is the syntax of reverse"
+            ],
+            "responses": [
+                "list.reverse()"
+            ]
+        },
+        {
             "tag": "sort",
             "patterns": [
                 "what is sort",
@@ -1582,6 +3245,18 @@
             ],
             "responses": [
                 "Sorts the list"
+            ]
+        },
+        {
+            "tag": "sortSyntax",
+            "patterns": [
+                "syntax for sort",
+                "syntax for sort in python",
+                "sort syntax",
+                "what is the syntax of sort"
+            ],
+            "responses": [
+                "list.sort(reverse=True|False, key=myFunc)"
             ]
         }
     ]
