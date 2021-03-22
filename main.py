@@ -1,3 +1,5 @@
+from os import path
+import os.path
 from tensorflow.python.framework import ops
 import pickle
 import json
@@ -9,6 +11,7 @@ import codecs
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
+
 
 def aiml(query):
     intents = json.load(codecs.open('./intents.json', 'r', 'utf-8-sig'))
@@ -72,7 +75,7 @@ def aiml(query):
     train_x = list(training[:, 0])
     train_y = list(training[:, 1])
     ops.reset_default_graph()
-    # build neural network
+    # Build neural network
     net = tflearn.input_data(shape=[None, len(train_x[0])])
     net = tflearn.fully_connected(net, 8)
     net = tflearn.fully_connected(net, 8)
@@ -81,12 +84,18 @@ def aiml(query):
 
     # define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
-    try:
+    # try:
+    if(path.isdir('tflearn_logs')):
         model.load("model.tflearn")
-    except:
-    # start training (apply gradient descent algorithm)
-        model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
+    else:
+        model.fit(train_x, train_y, n_epoch=1000,
+                  batch_size=8, show_metric=True)
         model.save('model.tflearn')
+
+    # except:
+    # dtart training (apply gradient descent algorithm)
+    # model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
+    # model.save('model.tflearn')
 
     results = model.predict([bag_of_words(query, words)])
     results_index = np.argmax(results)
@@ -100,6 +109,7 @@ def aiml(query):
 
     return (random.choice(responses))
 
+
 def clean_up_sentence(sentence):
     # tokenize the pattern
     sentence_words = nltk.word_tokenize(sentence)
@@ -108,6 +118,7 @@ def clean_up_sentence(sentence):
     return sentence_words
 
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
+
 
 def bag_of_words(sentence, words, show_details=False):
     # tokenize the pattern
