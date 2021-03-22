@@ -7,12 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyChat</title>
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,7 +23,7 @@
         font-family: 'Ubuntu', sans-serif;
         font-weight: 600;
     }
-
+    
     .container {
         border-radius: 20px;
         background-color: black;
@@ -36,7 +33,7 @@
         /*max-width: 1500px;*/
         position: relative;
     }
-
+    
     .row {
         position: absolute;
         /* bottom: 10px; */
@@ -46,21 +43,25 @@
         bottom: 25px;
         margin: auto;
     }
-
+    
     .chat {
         font-size: 15px;
         max-height: 70vh;
         overflow-y: auto;
-        scrollbar-width: none;        
+        scrollbar-width: none;
         display: flex;
         flex-direction: column;
+        
     }
-
+    .chat::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+    
     .chat ul {
         list-style-type: none;
         padding: 0;
     }
-
+    
     .left-chat {
         background-color: lightgreen;
         text-align: left;
@@ -74,7 +75,7 @@
         left: 0;
         right: 0;
     }
-
+    
     .right-chat {
         background-color: coral;
         text-align: left;
@@ -88,13 +89,12 @@
         right: 0;
         left: 0;
     }
-
+    
     .material-icons {
         font-size: 24px;
         color: white;
-
     }
-
+    
     input[type="text"],
     input[type=text]:focus {
         /*background-color: black;*/
@@ -116,53 +116,16 @@
         </div>
         <div class="chat">
             <ul>
+                {% for i in range(chat|length) %} {% if i%2==0 %}
                 <li>
-                    <div class="right-chat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam molestiae,
-                        recusandae quasi repellat dolores ipsa libero at quaerat, quia commodi qui unde voluptatum ad
-                        repudiandae totam eum ipsum! Iusto, laborum.</div>
+                    <div class="right-chat" style='white-space: pre-wrap;'>{{chat[i]}}</div>
                 </li>
+                {% else %}
                 <li>
-                    <div class="left-chat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium eaque
-                        odit
-                        exercitationem saepe corporis cum possimus odio quos fugit repellendus quia sunt, at ipsa,
-                        quidem
-                        doloribus, placeat libero enim consectetur.</div>
+                    <div class="left-chat" style='white-space: pre-wrap;'>{{chat[i]}}</div>
                 </li>
-                <li>
-                    <div class="right-chat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam molestiae,
-                        recusandae quasi repellat dolores ipsa libero at quaerat, quia commodi qui unde voluptatum ad
-                        repudiandae totam eum ipsum! Iusto, laborum.</div>
-                </li>
-                <li>
-                    <div class="left-chat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium eaque
-                        odit
-                        exercitationem saepe corporis cum possimus odio quos fugit repellendus quia sunt, at ipsa,
-                        quidem
-                        doloribus, placeat libero enim consectetur.</div>
-                </li>
-                <li>
-                    <div class="right-chat">Lorem ipsum dolor sit amet consectetur</div>
-                </li>
-                <li>
-                    <div class="left-chat">Lorem ipsum dolor sit amet consectetur</div>
-                </li>
-                <li>
-                    <div class="right-chat">Lorem ipsum dolor sit amet consectetur</div>
-                </li>
-                <li>
-                    <div class="left-chat">Lorem ipsum dolor sit amet consectetur</div>
-                </li>
-                <li>
-                    <div class="right-chat">{{ chat[0] }}</div>
-                </li>
-                <li>
-                    <div class="left-chat">{{ chat[0] }}</div>
-                </li>
-                <!-- {% if chat|length != 0 %} -->
+                {% endif %} {% endfor %}
             </ul>
-            <!-- <div class="left-chat">{{ chat[0] }}</div><br>
-            <div class="right-chat">{{ chat[1] }}</div><br> -->
-            <!-- {% endif %} -->
         </div>
         <div class="row">
             <div class="col">
@@ -182,5 +145,4 @@
         </div>
     </div>
 </body>
-
 </html>
