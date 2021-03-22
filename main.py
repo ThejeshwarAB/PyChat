@@ -75,7 +75,8 @@ def aiml(query):
     train_x = list(training[:, 0])
     train_y = list(training[:, 1])
     ops.reset_default_graph()
-    # Build neural network
+    
+    # build neural network
     net = tflearn.input_data(shape=[None, len(train_x[0])])
     net = tflearn.fully_connected(net, 8)
     net = tflearn.fully_connected(net, 8)
@@ -84,18 +85,13 @@ def aiml(query):
 
     # define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
-    # try:
+    # checks if model is saved 
     if(path.isdir('tflearn_logs')):
         model.load("model.tflearn")
     else:
         model.fit(train_x, train_y, n_epoch=1000,
                   batch_size=8, show_metric=True)
         model.save('model.tflearn')
-
-    # except:
-    # dtart training (apply gradient descent algorithm)
-    # model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
-    # model.save('model.tflearn')
 
     results = model.predict([bag_of_words(query, words)])
     results_index = np.argmax(results)
@@ -104,11 +100,12 @@ def aiml(query):
     for tg in intents["intents"]:
         if tg['tag'] == tag:
             responses = tg['responses']
+            
+    # checking for unknown query       
     if (np.argmax(results) <= 47):
         return ("Try Again")
 
     return (random.choice(responses))
-
 
 def clean_up_sentence(sentence):
     # tokenize the pattern
@@ -118,11 +115,10 @@ def clean_up_sentence(sentence):
     return sentence_words
 
 # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
-
-
 def bag_of_words(sentence, words, show_details=False):
     # tokenize the pattern
     sentence_words = clean_up_sentence(sentence)
+    
     # bag of words
     bag = [0]*len(words)
     for s in sentence_words:
@@ -131,5 +127,4 @@ def bag_of_words(sentence, words, show_details=False):
                 bag[i] = 1
                 if show_details:
                     print("Found in bag: %s" % w)
-
     return(np.array(bag))
