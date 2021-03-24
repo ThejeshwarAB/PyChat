@@ -102,7 +102,7 @@ def aiml(query):
             responses = tg['responses']
             
     # checking for unknown query       
-    if (np.argmax(results) <= 47):
+    if (np.argmax(results) <= 50):
         return ("Try Again")
 
     return (random.choice(responses))
