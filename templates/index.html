@@ -116,6 +116,9 @@
         </div>
         <div class="chat">
             <ul>
+                <div class="left-chat" style='white-space: pre-wrap;'>Hello</div>
+                <div class="left-chat" style='white-space: pre-wrap;'>I am PyChat, your intelligent Python assistant</div>
+                <div class="left-chat" style='white-space: pre-wrap;'>Ping me for syntax and definitions of anything in Python3</div>
                 {% for i in range(chat|length) %} {% if i%2==0 %}
                 <li>
                     <div class="right-chat" style='white-space: pre-wrap;'>{{chat[i]}}</div>
