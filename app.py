@@ -42,7 +42,7 @@ def index():
         chat_list.append(query)
         chat_list.append(aiml(query))
         session["chat"] = chat_list
-        return render_template("index.html", chat=session["chat"], len=len(session["chat"]))
+        return render_template("index.html", chat=session["chat"], len=len(session["chat"]), scroll="scroll")
     else:
         return render_template("index.html", chat=[])
 
