@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
 <style>
@@ -50,8 +50,7 @@
         overflow-y: auto;
         scrollbar-width: none;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
     .chat::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
@@ -115,7 +114,7 @@
             </h1>
         </div>
         <div class="chat">
-            <ul>
+            <ul id="chat-thread">
                 <div class="left-chat" style='white-space: pre-wrap;'>Hello</div>
                 <div class="left-chat" style='white-space: pre-wrap;'>I am PyChat, your intelligent Python assistant</div>
                 <div class="left-chat" style='white-space: pre-wrap;'>Ping me for syntax and definitions of anything in Python3</div>
@@ -125,11 +124,12 @@
                 </li>
                 {% else %}
                 <li>
-                    <div class="left-chat" style='white-space: pre-wrap;'>{{chat[i]}}</div>
+                    <div class="left-chat" style='white-space: pre-wrap;' id='{{scroll}}'>{{chat[i]}}</div>
                 </li>
                 {% endif %} {% endfor %}
-            </ul>
+
         </div>
+            </ul>
         <div class="row">
             <div class="col">
                 <form action="/index" method="POST">
@@ -141,11 +141,15 @@
                                     send
                                 </span></button>
                         </div>
-
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+	$(document).ready(function(){
+ 	document.getElementById('{{ scroll }}').scrollIntoView({behavior: "smooth"});
+	});
+    </script>
 </body>
 </html>
