@@ -5,7 +5,7 @@ This is my final year project in college.
 
 Helps beginners in Python to get started.
 
-Clone the repository and make sure you have Py3 installed.
+Clone the repository and make sure you have Py installed.
 
 Then, pip install the packages as mentioned below in cmd.
 
