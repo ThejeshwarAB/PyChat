@@ -7,7 +7,7 @@ Helps beginners in Python to get started.
 
 Clone the repository and make sure you have Py installed.
 
-Once done, pip install the packages as metioned below in cmd.
+Then, pip install the packages as mentioned below in cmd.
 
 ```
 pip install nltk flask 
